@@ -1,0 +1,11 @@
+name: Beach Umbrella
+description: A beach umbrella! Maybe i will use this when i go to the beach.
+pickup: Now I can use the umbrella on the beach!
+-------------------------------------
+name: Swimming Goggles
+description: Goggles for swimming in the lake. A swimming goggles! Maybe this will help me see better when i dive into the water.
+pickup: Now I can see the fish when swimming in the lake.
+-------------------------------------
+name: Life Jacket
+description: A life jacket! Maybe this will save my life when i am drowning.
+pickup: This might come handy when swimming in the lake, i heard so many people drowned there!
