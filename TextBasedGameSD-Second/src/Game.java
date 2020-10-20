@@ -39,7 +39,10 @@ public class Game {
             if (userInput.contains("pickup") ||
                     userInput.contains("drop") ||
                     userInput.contains("inspect") ||
-                    userInput.contains("inventory")){
+                    userInput.contains("inventory") ||
+                    userInput.contains("unequip") ||
+                    userInput.contains("heal") ||
+                    userInput.contains("equip")){
                 String itemName = "";
 
                 switch (userInput.split(" ")[0]){
@@ -60,6 +63,21 @@ public class Game {
                         itemName = userInput.substring(userInput.indexOf("inventory: ")+4);
                         checkInventory(itemName);
                         break;
+
+                    case "equip":
+                        itemName = userInput.substring(userInput.indexOf("equip ")+6);
+                        equip(itemName);
+                        break;
+
+                    case "unequip":
+                        itemName = userInput.substring(userInput.indexOf("unequip ")+8);
+                        unequip(itemName);
+                        break;
+
+                    case "heal":
+                        itemName = userInput.substring(userInput.indexOf("heal ")+5);
+                        heal(itemName);
+                        break;
                 }
             }else{
                 moveBetweenRooms(userInput);
@@ -70,7 +88,6 @@ public class Game {
 
 
     }
-
 
     //-------------------------Read Directions and Rooms from file--------------------------
 
@@ -108,10 +125,20 @@ public class Game {
                     int indexOfItemName = roomsString[i].indexOf("name: ")+6;
                     int indexOfItemDesc = roomsString[i].indexOf("description: ")+13;
                     int indexOfItemPickup = roomsString[i].indexOf("pickup: ")+8;
+                    int indexOfItemHeal = roomsString[i].indexOf("heal: ")+6;
+                    int indexOfItemDamage = roomsString[i].indexOf("damage: ")+8;
+                    int indexOfItemConsume = roomsString[i].indexOf("consume: ")+9;
+                    int indexOfItemEquipped = roomsString[i].indexOf("equipped: ")+10;
                     String itemName = roomsString[i].substring(indexOfItemName,indexOfItemDesc-13).trim();
                     String itemDesc = roomsString[i].substring(indexOfItemDesc,indexOfItemPickup-8).trim();
-                    String itemPickup = roomsString[i].substring(indexOfItemPickup).trim();
-                    Item item = new Item(itemName,itemDesc,itemPickup);
+                    String itemPickup = roomsString[i].substring(indexOfItemPickup, indexOfItemHeal-6).trim();
+                    String itemHeal = roomsString[i].substring(indexOfItemHeal,indexOfItemDamage-8).trim();
+                    String itemDamage = roomsString[i].substring(indexOfItemDamage,indexOfItemConsume-9).trim();
+                    String itemConsume = roomsString[i].substring(indexOfItemConsume,indexOfItemEquipped-10).trim();
+                    boolean itemConsumable = Boolean.parseBoolean(itemConsume);
+                    String itemEquipped = roomsString[i].substring(indexOfItemEquipped).trim();
+                    boolean itemEquipped1 = Boolean.parseBoolean(itemEquipped);
+                    Item item = new Item(itemName,itemDesc,itemPickup, itemHeal, itemDamage, itemEquipped1, itemConsumable);
                     if (i == 2){
                         rooms.get(1).getItemsInRoom().add(item);
                     }else  if (i == 1){
@@ -262,5 +289,73 @@ public class Game {
             System.out.println(itemInRoom.getName());
         }
     }
-
+    //------------------------equip------------------------
+    private static void equip(String item) {
+        for(Item itemInRoom:pickupedItems) {
+            if (item.equalsIgnoreCase(itemInRoom.getName()))
+            {
+                if (Player.isEquipped())
+                {
+                    System.out.println("An item is already equipped.");
+                }
+                else
+                {
+                    int damage = Integer.parseInt(itemInRoom.getDamage());
+                    System.out.println(itemInRoom.getName() + " has successfully been equipped.");
+                    Player.setAttackPower(Player.getAttackPower() + damage);
+                    itemInRoom.setEquipped(true);
+                    Player.setEquipped(true);
+                    Player.setEquippedItem(itemInRoom.getName());
+                    System.out.println("Your current Attack Power is: " + Player.getAttackPower());
+                }
+            }
+        }
+    }
+    //------------------------unequip------------------------
+    public static void unequip(String item)
+    {
+        for(Item itemInRoom:pickupedItems)        {
+            if (itemInRoom.isEquipped())
+            {
+                int damage = Integer.parseInt(itemInRoom.getDamage());
+                System.out.println(itemInRoom.getName() + " has successfully been unequipped.");
+                Player.setAttackPower(Player.getAttackPower() - damage);
+                itemInRoom.setEquipped(false);
+                Player.setEquipped(false);
+                Player.setEquippedItem(null);
+                System.out.println("Your current Attack Power is: " + Player.getAttackPower());
+            }
+        }
+    }
+    //------------------------heal------------------------
+    public static void heal(String item)
+    {
+        if (Player.isEquipped())
+        {
+            for(Item itemInRoom:pickupedItems)
+            {
+                if (itemInRoom.isEquipped() && Player.getEquippedItem().equals(itemInRoom.getName()))
+                {
+                    if (itemInRoom.isConsume())
+                    {
+                        int heal = Integer.parseInt(itemInRoom.getHeal());
+                        System.out.println(itemInRoom.getName() + " has successfully been consumed & the player has been healed.");
+                        Player.setHP(Player.getHP() + heal);
+                        //Player.getInventory().remove(i);
+                        Player.setEquipped(false);
+                        Player.setEquippedItem(null);
+                        System.out.println("Your current HP is: " + Player.getHP());
+                    }
+                    else
+                    {
+                        System.out.println("This item cannot be consumed.");
+                    }
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Before healing you must equip the item first.");
+        }
+    }
 }

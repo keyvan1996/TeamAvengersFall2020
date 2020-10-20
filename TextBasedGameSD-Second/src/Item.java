@@ -1,17 +1,28 @@
+import java.util.ArrayList;
+
 public class Item {
     //---------------------------------Fields------------------------------------
     private String name;
     private String description;
     private String pickup;
+    private String heal;
+    private String damage;
+    private boolean equipped;
+    private boolean consume;
+    private static ArrayList<Item> itemItems = new ArrayList<Item>();
     //---------------------------------Methods------------------------------------
 
     //---------------------------------constructor------------------------------------
 
-
-    public Item(String name, String description, String pickup) {
+    public Item(String name, String description, String pickup, String heal, String damage,
+                boolean equipped, boolean consume) {
         this.name = name;
         this.description = description;
         this.pickup = pickup;
+        this.heal = heal;
+        this.damage = damage;
+        this.equipped = equipped;
+        this.consume = consume;
 
     }
 
@@ -42,5 +53,44 @@ public class Item {
     public void setDescription(String description) {
         this.description = description;
     }
+
+
+    public String getHeal() {
+        return heal;
+    }
+
+    public void setHeal(String heal) {
+        this.heal = heal;
+    }
+
+    public String getDamage() {
+        return damage;
+    }
+
+    public void setDamage(String damage) {
+        this.damage = damage;
+    }
+
+    public boolean isEquipped() {
+        return equipped;
+    }
+
+    public boolean isConsume()
+    {
+        return consume;
+    }
+
+    public void setEquipped(boolean equipped) {
+        this.equipped = equipped;
+    }
+
+    public static ArrayList<Item> getItemItems() {
+        return itemItems;
+    }
+
+    public static void setItemItems(ArrayList<Item> itemItems) {
+        Item.itemItems = itemItems;
+    }
+
 
 }
