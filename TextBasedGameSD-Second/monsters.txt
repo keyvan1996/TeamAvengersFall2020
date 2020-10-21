@@ -1,0 +1,78 @@
+id: m1
+name: Agent 002
+description: With a mysterious grin this person was sent by an incognito group… but for what?
+health points: 100
+actions: Agent has blinded you with his laser pen you lose 10 HP, Agent reaches for a glass vase nearby and throws it at you, You lose 20 HP, The Agent is now fed up and calls his boss, You lose 10 HP
+-------------------------------------
+id: m2
+name: RX-93
+description: With its infrared sensors this robot can detect all heat signatures…make sure you hide or maybe an item can save you...
+health points: 25
+actions: Sensor detects heat signatures and tosses a grenade. You lose 20 HP., Charges up and releases a shock of electricity. You lose 10 HP.
+-------------------------------------
+id: m3
+name: RX-78
+description: With its mounted cannon this robot can detect even the slightest of movement. But be careful… it has a 99.8% hit rate!
+health points: 30
+actions: Movement detected, fires cannon. You lose 30 HP., Changes to rapid fire mode and unleashes a volley of bullets. Lose 25 HP.
+-------------------------------------
+id: m4
+name: RX-11
+description: A flying drone that will alert when people have entered its vicinity...maybe an item can take it down?
+health points: 45
+actions: Sirens go off with a loud piercing cry. You lose 10 HP., Sirens get louder and louder. You lose 30 HP.
+-------------------------------------
+id: m5
+name: Prototype-0
+description: With its new invisibility ability you have to wish for luck to try and hit it. Some goggles might come in handy…
+health points: 100
+actions: Its arm changes to a sword and slices in your direction. You lose 30 HP., Rockets come out from its torso area and explode nearby knocking you back. You lose 20 HP.
+-------------------------------------
+id: m6
+name: RX-88
+description: With its extend-o arms it can grab anything within a 20 meter radius. Might have to watch out for this one.
+health points: 65
+actions: Extends arms and spins them around its body, striking you down. Lose 15 HP., With its sharp fingers it lunges at you. You lose 35 HP.
+-------------------------------------
+id: m7
+name: RX-37
+description: Very simple, it blows up. Please find a shield…
+health points: 10
+actions: It starts a countdown 3..2..1 and that is it, it's over. You lose all HP.
+-------------------------------------
+id: m8
+name: Henchmen
+description: The vile scum have one weakness, a good old fashioned fist fight… or maybe you just use a weapon.. who knows.
+health points: 5
+actions: Runs at you and trips on a wire knocking you down. You lose 5 HP.
+-------------------------------------
+id: 9
+name: Robot Rats
+description: Monstrous rats have spotted you in the break room. After you ate their pizza .
+health points: 50
+actions: 5 rats bite you .. you lose 10 HP, 10 rats bite you .. You lose 20 HP
+-------------------------------------
+id: 10
+name: Boss
+description: Oh crap it's the boss. If you hide behind your shield the Boss will not see you.
+health points: 15
+actions: Boss can see you! You look 20 HP
+-------------------------------------
+id: 11
+name: CEO
+description: Oh crap it’s the CEO. If you hide behind your shield the CEO will not see you.
+health points: 15
+actions: CEO can see you! You lose 20 HP, CEO takes your inventory and you lose 20 HP
+-------------------------------------
+id: 12
+name: Security Camera
+description: When spotted by a security camera IN HALLWAY 2 without your shield you will be seen
+health points: 5
+actions: Without your shield you will lose 35 HP
+-------------------------------------
+id: 13
+name: Combat Robot
+description: The Combat room is full of robots if you don't take the BIT you will not survive
+health points: 100
+actions: Robots swarm around you and you are scared.. You lose 20 HP, Robots kill you … You lose the game. “Restart” to try again.
+-------------------------------------

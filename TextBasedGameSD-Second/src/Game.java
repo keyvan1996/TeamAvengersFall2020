@@ -22,6 +22,7 @@ public class Game {
         readFileAndPutInMap("rooms.txt");
         readFileAndPutInMap("puzzles.txt");
         readFileAndPutInMap("items.txt");
+        readFileAndPutInMap("monsters.txt");
 
 
         //-------------------------main--------------------------
@@ -164,6 +165,21 @@ public class Game {
                         rooms.get(5).setPuzzle(puzzle);
                     }
                     break;
+                case "monsters.txt":
+                    roomsString[i] = roomsString[i].trim();
+                    int indexOfmonsterId = roomsString[i].indexOf("id: ")+4;
+                    int indexOfname = roomsString[i].indexOf("name: ")+6;
+                    int indexOfdescription = roomsString[i].indexOf("description: ")+13;
+                    int indexOfhealth = roomsString[i].indexOf("health points: ")+15;
+                    int indexOfactions = roomsString[i].indexOf("actions: ")+9;
+                    //placeholders until i understand what the numbers mean exactly.
+                    int monsterId = 0;
+                    String monsterName = "";
+                    String monsterDesc = "";
+                    int monsterHP = 0;
+                    String monsterAction = "";
+                    break;
+
             }
 
 
