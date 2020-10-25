@@ -1,29 +1,184 @@
 id: 1
-name: at the house
-description: You wake up and it is a nice day outside. You are thinking about what you want to do today.
-directions: S.2
+name: My Office
+description: This is the main character Cubicle where he does his basic programming work because he is a new hire. To your left you have set down your blue access card that gives access to basic areas on the first floor. The only exit leads to the main office room where you and your small division collaborate.
+directions: E.3
 -------------------------------------
 id: 2
-name: at the gate
-description: You made it to the entrance gate. The entrance fee is five dollars, You entered the lake area after you paid the fee.
-directions: N.1,S.3
+name: Design office
+description: This room does not affect the main character but in it resides 2 PC’s as well as chairs where the design team create and implement new ideas for marketing. Outside of this room is the main office.
+directions: E.3
 -------------------------------------
 id: 3
-name: in the parking lot
-description: You made it to the parking lot and looking for a parking spot. You parked your car near to the locker room.
-directions: N.2,W.4
+name: Main Office room
+description: This is the room where your small division in the company collaborates and does very small lower level meetings. These meetings usually only involve the manager of your division, another programmer and the design team. To the Northeast is the break room and the South east is your division manager's office.
+directions: NW.1,SW.2
 -------------------------------------
 id: 4
-name: in the locker room
-description: You are in the locker room. This is where you change and get ready for the beach or swimming.
-directions: E.3,S.6,W.5
+name: Division Managers room
+description: Nothing going on in this room...
+directions: W.3
 -------------------------------------
 id: 5
-name: on the beach
-description: You are on the beach. Hopefully you did not forget to bring your beach umbrella.
-directions: E.4
+name: Break Room
+description: This area contains the essentials for office work. Coffee and water. If I head out the door ahead of me, I can reach the main hallway.
+directions: W.3,E.6
 -------------------------------------
 id: 6
-name: in the water
-description: Water is very warm, perfect time for a swim. However, just make sure to wear a life jacket. It is dangerous around here.
+name: Hallway to Building entrance
+description: This area provides the entrance to the building. To the north is the exit out of the building but I have a lot of work to do so I can’t leave yet. I really love the modern décor they chose here.
+directions: N.4
+-------------------------------------
+id: 7
+name: Basement Stairs
+description: I think these stairs lead down to the basement floor where the robotics development division works. You have a flashlight so it should be safe to go down there just be careful.
+directions: N.4
+-------------------------------------
+id: 8
+name: Hallway 2
+description: It's so quiet here without all the commotion in the conference room. I guess I will have to get used to the silence of the after-hours hallway if I want to prove my worth.
+directions: N.4
+-------------------------------------
+id: 9
+name: Restroom
+description: I don’t need to go to the bathroom now I am not sure why I am here.
+directions: N.4
+-------------------------------------
+id: 10
+name: Supply Room
+description: There is a flashlight on the TABLE that would be super useful right now. I should grab it and see if it turns on
+directions: N.4
+-------------------------------------
+id: 11
+name: Janitorial Closet
+description: Some basic supplies are in here. Apparently, the staff doesn’t understand what safety is. You see a broken mop handle with a jagged split edge in the corner. This would probably come in use if you aren’t alone here.
+directions: N.4
+-------------------------------------
+id: 12
+name: Conference Room
+description: It is dead quiet here normally the whole facility is discussing new plans to implement here. It's such an eerie feeling being here after hours. It looks like the janitorial staff didn’t clean up the last meeting. There are a few slices of pizza on the conference table.
+directions: N.4
+-------------------------------------
+id: 13
+name: Server Room
+description: You look around and all you see is towers of server PCs. This is a very expensive room. The maintenance room is at the end of this room.
+directions: N.4
+-------------------------------------
+id: 14
+name: Maintenance Room
+description: This is a lot more basic than you thought. I have never been in here. Still though one PC, file cabinet and a desk? This room runs the security protocol for the whole building?
+directions: N.4
+-------------------------------------
+id: 15
+name: Elevator
+description: This takes you to the executive floor you think. You have used the elevator. It is only intended for the finance, CEO, and elite programmers that call the shots here. because you don’t have the credentials to do so. You shake in excitement unaware of what awaits.
+directions: N.4
+-------------------------------------
+id: 16
+name: Stairs
+description: These stairs lead down to the robotics facility of Axis industries. You have never been down here because it doesn’t pertain to your job. This is the floor where the military grade robots are created and tested. If you are not alone in this building this could get very dangerous. Ahead of you is a hallway with terminals to the left wall.
+directions: N.4
+-------------------------------------
+id: 17
+name: Basement Hallway
+description: This area is Erie. Large cylindrical tubes hang on the walls connected by lots of pipes and wires. This place feels ominous you should get out as soon as possible. (add this if the power is not on) You should just continue straight to turn on the power.
+directions: N.4
+-------------------------------------
+id: 18
+name: Breaker Connector Room
+description: Just a hallway with some wires and metal walls this must lead to the breaker room. Ahead you see a door with a high voltage symbol on it.
+directions: N.4
+-------------------------------------
+id: 19
+name: Breaker Room
+description: The breaker here controls all power functions. The wires have been cut. There is a generator to the left side of the room. Odd someone turned it off. That would explain the lack of power. Be aware you are not alone.
+directions: N.4
+-------------------------------------
+id: 20
+name: Robotics Development and Testing
+description: All around you exist shelves with disassembled robotic parts. And computers with rotating holograms of what looks to be like an attack robot. You hear something activate as you enter the room. Be on your guard.
+directions: N.4
+-------------------------------------
+id: 21
+name: AI Development
+description: You enter the room. There is not much here, just a robot in the center of the room with metal tubes and wires latched onto its skull. It looks in your direction
+directions: N.4
+-------------------------------------
+id: 22
+name: Weapons Development
+description: In this room there are 4 rotating minigun turrets. They are shifting back and forth but they don’t seem to see you. In the center of the room is what looks to be some sort of weapon. Its locked in place with metal claws but it looks like it can be removed.
+directions: N.4
+-------------------------------------
+id: 23
+name: Combat Testing room
+description: This is where the facility makes the robots combat ready. Odd…  There are two robots dueling in the center. They stop mid attack and lock their focus on you. Prepare for battle!
+directions: N.4
+-------------------------------------
+id: 24
+name: Personality Testing
+description: Upon entering you see a humanoid like robot muttering obscenities to itself. It looks in your direction and cocks its head in a curious manner. Its eyes instantly turn red. It lunges at you.
+directions: N.4
+-------------------------------------
+id: 25
+name: Psychology and development
+description: This room was the first room to develop robotics. It looks like it isn’t used often. Lining the walls Are glass cases of different forms of robots created over the years. In the center is the first robot at axis industries casing the RX-9 below the empty pedestal is a gold plaque with the name Rex-Nine. The glass case is open. Where could the robot be?  You decide to leave the room and search for the robot. In the corner of the room you see red eyes glowing in the darkness. A small robot lunges out at you from the shadows bearing a blade.
+directions: N.4
+-------------------------------------
+id: 26
+name: Newly Developed Robots- Tested
+description: Upon entering you see a dimly lit room with a metal cylindrical platform supported by hydraulic mechanics. On there stands a menacing robot. Shackled to a wall in the middle of the platform. The armor of it is obsidian black shimmering under the dimly lit atmosphere. IT is lined with blue engravings across its entire body. Its shackles open and it falls to the floor. It looks up at you and all the engravings start to resonate and glow. You can see the hatred in its eyes as it stares at you. It disappears and reappears directly in front of you.
+directions: N.4
+-------------------------------------
+id: 27
+name: Untested Products
+description: The room is lined with terminals and glowing buttons. On the screens are 3d models of uncreated products with a 3d printer in the back area. This area is really quiet. In the center is a console that you should probably check out.
+directions: N.4
+-------------------------------------
+id: 28
+name: Elevator
+description: This elevator takes you from the executive floor to the first floor.
+directions: N.4
+-------------------------------------
+id: 29
+name: Security Bypass
+description: As soon as you enter the room you see two shady looking characters with a menacing statute. They look in your direction and start moving towards you.
+directions: N.4
+-------------------------------------
+id: 30
+name: Hallway
+description: The walls are lined with gold trim. This area doesn't look a thing like the floor you work on. You see a single henchman you need to act fast he has not seen you yet.
+directions: N.4
+-------------------------------------
+id: 31
+name: Elite Break Room
+description: This break room doesn't look too much different from yours. There is a cybernetic rat in the trash can eying a slice of pizza on the counter.
+directions: N.4
+-------------------------------------
+id: 32
+name: Crossway
+description: This area leads to another hallway, the file room and the software department. Not much more to this area...
+directions: N.4
+-------------------------------------
+id: 33
+name: File Department
+description: People still keep physical files apparently. There is the henchman's leader in the corner, maybe he can get me access into the ceo office.
+directions: N.4
+-------------------------------------
+id: 34
+name: Finance Department
+description: This is where all the finances are done, this place has nothing to do with you.
+directions: N.4
+-------------------------------------
+id: 35
+name: Senior Software Division
+description: This area looks drastically different from your tiny little work area.
+directions: N.4
+-------------------------------------
+id: 36
+name: Hallway 2
+description: Top notch security. To the corners of the room exist Security cameras in each corner.
+directions: N.4
+-------------------------------------
+id: 37
+name: CEO Office
+description: You enter the room. Regan, a former senior software dev, stands looming over the pc. Wearing all black he looks up at you as the light ominously reflects off his glasses.
 directions: N.4

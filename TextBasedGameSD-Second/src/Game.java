@@ -6,6 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static jdk.nashorn.internal.objects.NativeString.trim;
+
 public class Game {
 
     private static Map<Integer, Room> rooms;
@@ -13,81 +15,80 @@ public class Game {
     private static ArrayList<Item> pickupedItems;
     //=============================================Methods==============================================
     public static void main(String[] args) {
+
         //-------------------------Init fields--------------------------
         rooms = new HashMap<>();
         currentRoomId = 1;
         pickupedItems = new ArrayList<>();
 
         //-------------------------call read from file methods--------------------------
-        readFileAndPutInMap("rooms.txt");
-        readFileAndPutInMap("puzzles.txt");
-        readFileAndPutInMap("items.txt");
-        readFileAndPutInMap("monsters.txt");
+        readFileAndPutInMap("TextBasedGameSD-Second/rooms.txt");
+        readFileAndPutInMap("TextBasedGameSD-Second/puzzles.txt");
+        readFileAndPutInMap("TextBasedGameSD-Second/items.txt");
+        readFileAndPutInMap("TextBasedGameSD-Second/monsters.txt");
 
 
         //-------------------------main--------------------------
-        Scanner userCommand = new Scanner(System.in);  // Create a Scanner object
+            Scanner userCommand = new Scanner(System.in);  // Create a Scanner object
 
-        String userInput = "";
-        System.out.println("Welcome");
-        System.out.println("You can drop, pickup, inspect items with below format:");
-        System.out.println("command item_name");
-        System.out.println("============================================");
-        while (!userInput.equals("exit")){
-            printRoomsItem(currentRoomId);
-            printRoomInformationAndSetVisited(currentRoomId);
-            userInput = userCommand.nextLine();
-            if (userInput.contains("pickup") ||
-                    userInput.contains("drop") ||
-                    userInput.contains("inspect") ||
-                    userInput.contains("inventory") ||
-                    userInput.contains("unequip") ||
-                    userInput.contains("heal") ||
-                    userInput.contains("equip")){
-                String itemName = "";
+            String userInput = "";
+            System.out.println("Welcome");
+            System.out.println("You can drop, pickup, inspect items with below format:");
+            System.out.println("command item_name");
+            System.out.println("============================================");
+            while (!userInput.equals("exit")) {
+                printRoomsItem(currentRoomId);
+                printRoomInformationAndSetVisited(currentRoomId);
+                userInput = userCommand.nextLine();
+                if (userInput.contains("pickup") ||
+                        userInput.contains("drop") ||
+                        userInput.contains("inspect") ||
+                        userInput.contains("inventory") ||
+                        userInput.contains("unequip") ||
+                        userInput.contains("heal") ||
+                        userInput.contains("equip")) {
+                    String itemName = "";
 
-                switch (userInput.split(" ")[0]){
-                    case "pickup":
-                        itemName = userInput.substring(userInput.indexOf("pickup ")+7);
-                        pickupItem(itemName);
-                        break;
-                    case "drop":
-                        itemName = userInput.substring(userInput.indexOf("drop ")+5);
-                        dropItem(itemName);
-                        break;
-                    case "inspect":
-                        itemName = userInput.substring(userInput.indexOf("inspect ")+8);
-                        inspectItem(itemName);
-                        break;
+                    switch (userInput.split(" ")[0]) {
+                        case "pickup":
+                            itemName = userInput.substring(userInput.indexOf("pickup ") + 7);
+                            pickupItem(itemName);
+                            break;
+                        case "drop":
+                            itemName = userInput.substring(userInput.indexOf("drop ") + 5);
+                            dropItem(itemName);
+                            break;
+                        case "inspect":
+                            itemName = userInput.substring(userInput.indexOf("inspect ") + 8);
+                            inspectItem(itemName);
+                            break;
 
-                    case "inventory":
-                        itemName = userInput.substring(userInput.indexOf("inventory: ")+4);
-                        checkInventory(itemName);
-                        break;
+                        case "inventory":
+                            itemName = userInput.substring(userInput.indexOf("inventory: ") + 4);
+                            checkInventory(itemName);
+                            break;
 
-                    case "equip":
-                        itemName = userInput.substring(userInput.indexOf("equip ")+6);
-                        equip(itemName);
-                        break;
+                        case "equip":
+                            itemName = userInput.substring(userInput.indexOf("equip ") + 6);
+                            equip(itemName);
+                            break;
 
-                    case "unequip":
-                        itemName = userInput.substring(userInput.indexOf("unequip ")+8);
-                        unequip(itemName);
-                        break;
+                        case "unequip":
+                            itemName = userInput.substring(userInput.indexOf("unequip ") + 8);
+                            unequip(itemName);
+                            break;
 
-                    case "heal":
-                        itemName = userInput.substring(userInput.indexOf("heal ")+5);
-                        heal(itemName);
-                        break;
+                        case "heal":
+                            itemName = userInput.substring(userInput.indexOf("heal ") + 5);
+                            heal(itemName);
+                            break;
+                    }
+                } else {
+                    moveBetweenRooms(userInput);
+
                 }
-            }else{
-                moveBetweenRooms(userInput);
 
             }
-
-        }
-
-
     }
 
     //-------------------------Read Directions and Rooms from file--------------------------
@@ -109,19 +110,22 @@ public class Game {
 
             switch (filePath){
 
-                case "rooms.txt":
+                case "TextBasedGameSD-Second/rooms.txt":
                     roomsString[i] = roomsString[i].trim();
                     int indexOfId = 4;
                     int indexOfName = roomsString[i].indexOf("name: ")+6;
                     int indexOfDesc = roomsString[i].indexOf("description: ")+13;
                     int indexOfDirs = roomsString[i].indexOf("directions: ")+12;
-                    int roomId = Integer.parseInt(roomsString[i].substring(indexOfId,indexOfName-7));
-                    String roomName = roomsString[i].substring(indexOfName,indexOfDesc-13);
-                    String roomDesc = roomsString[i].substring(indexOfDesc,indexOfDirs-12);
-                    String roomDirs = roomsString[i].substring(indexOfDirs);
+                    int roomId = Integer.parseInt(trim(roomsString[i].substring(indexOfId,indexOfName-7)));
+                    String roomName = trim(roomsString[i].substring(indexOfName,indexOfDesc-13));
+                    String roomDesc = trim(roomsString[i].substring(indexOfDesc,indexOfDirs-12));
+                    String roomDirs = trim(roomsString[i].substring(indexOfDirs));
+                    System.out.println(roomName);
+                    System.out.println(roomDesc);
+                    System.out.println(roomDirs);
                     rooms.put(roomId,new Room(roomId,roomName,roomDesc,roomDirs,false,new ArrayList<Item>()));
                     break;
-                case "items.txt":
+                case "TextBasedGameSD-Second/items.txt":
                     roomsString[i] = roomsString[i].trim();
                     int indexOfItemName = roomsString[i].indexOf("name: ")+6;
                     int indexOfItemDesc = roomsString[i].indexOf("description: ")+13;
@@ -150,7 +154,7 @@ public class Game {
 
                     }
                     break;
-                case "puzzles.txt":
+                case "TextBasedGameSD-Second/puzzles.txt":
                     roomsString[i] = roomsString[i].trim();
                     int indexOfQuestion = roomsString[i].indexOf("question: ")+10;
                     int indexOfanswer = roomsString[i].indexOf("answer: ")+8;
@@ -165,7 +169,7 @@ public class Game {
                         rooms.get(5).setPuzzle(puzzle);
                     }
                     break;
-                case "monsters.txt":
+                case "TextBasedGameSD-Second/monsters.txt":
                     roomsString[i] = roomsString[i].trim();
                     int indexOfmonsterId = roomsString[i].indexOf("id: ")+4;
                     int indexOfname = roomsString[i].indexOf("name: ")+6;
@@ -242,8 +246,6 @@ public class Game {
         else {
             System.out.println("You can’t go this way");
         }
-
-
     }
 
     //-------------------------Print Room Info and Set Visit bool--------------------------

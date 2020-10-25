@@ -9,6 +9,7 @@ public class Room {
     private Boolean isVisited;
     private ArrayList<Item> itemsInRoom;
     private Puzzle puzzle;
+    private String floor;
     //---------------------------------Methods------------------------------------
 
     //---------------------------------constructor------------------------------------
