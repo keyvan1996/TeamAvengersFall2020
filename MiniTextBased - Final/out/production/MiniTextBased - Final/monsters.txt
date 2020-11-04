@@ -1,0 +1,1 @@
+roomID:,5,monsterID:,0,name:,Rooster,health:,15,attackPoints:,2,

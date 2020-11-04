@@ -1,0 +1,6 @@
+id:,0,name:,Blue Room,description:,You are inside a Blue Room,north:,-1,south:,3,east:,1,west:,-1,hasbeenvisited:,false,containsplayer:,true,
+id:,1,name:,Red Room,description:,You are inside a Red Room,north:,-1,south:,4,east:,2,west:,0,hasbeenvisited:,false,containsplayer:,false,
+id:,2,name:,Orange Room,description:,You are inside an Orange Room,north:,-1,south:,5,east:,-1,west:,1,hasbeenvisited:,false,containsplayer:,false,
+id:,3,name:,Purple Room,description:,You are inside a Purple Room,north:,0,south:,-1,east:,4,west:,-1,hasbeenvisited:,false,containsplayer:,false,
+id:,4,name:,Green Room,description:,You are inside a Green Room,north:,1,south:,-1,east:,5,west:,3,hasbeenvisited:,false,containsplayer:,false,
+id:,5,name:,Pink Room,description:,You are inside a Pink Room,north:,2,south:,-1,east:,-1,west:,4,hasbeenvisited:,false,containsplayer:,false,
