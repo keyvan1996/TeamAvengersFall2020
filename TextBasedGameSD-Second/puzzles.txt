@@ -1,8 +1,0 @@
-question: What 4 letter word can be written forward, backward or upside down, and can still be read from left to right?
-answer: NOON
--------------------------------------
-question: What kind of goose fights with snakes?
-answer: mongoose
--------------------------------------
-question: I am wet when drying. What am I?
-answer: towel
