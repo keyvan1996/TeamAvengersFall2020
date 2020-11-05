@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="" />
+    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/items.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monsters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/monsters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/puzzles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzles.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rooms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/rooms.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +22,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1jNIDbHNQAP6LiMJ7ER0nAFdlrI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -61,6 +73,8 @@
       <workItem from="1603981485806" duration="20232000" />
       <workItem from="1604464371327" duration="3110000" />
       <workItem from="1604506417009" duration="2926000" />
+      <workItem from="1604514379054" duration="18000" />
+      <workItem from="1604528087399" duration="14041000" />
     </task>
     <servers />
   </component>
@@ -68,30 +82,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1603909260823">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604529203991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603909260823" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604529203991" />
+    <state x="491" y="114" key="CommitChangelistDialog2" timestamp="1604543476816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="491" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604543476816" />
     <state x="1011" y="352" key="FileChooserDialogImpl" timestamp="1603771839681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1011" y="352" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603771839681" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1604507159594">
+    <state width="1877" height="129" key="GridCell.Tab.0.bottom" timestamp="1604543476856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159594" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1604507159593">
+    <state width="1877" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604543476856" />
+    <state width="1877" height="129" key="GridCell.Tab.0.center" timestamp="1604543476856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159593" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1604507159593">
+    <state width="1877" height="129" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604543476856" />
+    <state width="1877" height="129" key="GridCell.Tab.0.left" timestamp="1604543476856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159593" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1604507159593">
+    <state width="1877" height="129" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604543476856" />
+    <state width="1877" height="129" key="GridCell.Tab.0.right" timestamp="1604543476856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159593" />
+    <state width="1877" height="129" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604543476856" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1604507158490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -118,7 +136,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>503</line>
+          <line>598</line>
           <properties class="Game" method="attackPlayer">
             <option name="EMULATED" value="true" />
           </properties>
@@ -126,7 +144,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>476</line>
+          <line>571</line>
           <properties class="Game" method="attackMonster">
             <option name="EMULATED" value="true" />
           </properties>
@@ -134,32 +152,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>504</line>
+          <line>599</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>505</line>
+          <line>600</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>477</line>
+          <line>572</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>478</line>
+          <line>573</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>479</line>
+          <line>574</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>480</line>
+          <line>575</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>

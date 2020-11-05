@@ -197,7 +197,7 @@ public class Game {
         String rx = "(.*?)";        //regex expression to take items in quotes
         File mapFile = new File("src/rooms.txt");     //create new pathname for the file
         Scanner s = new Scanner(mapFile);           //file scanner
-        s.useDelimiter(",");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
+        s.useDelimiter("/");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
         for (int i = 0; i <= 5; i++) { //loops 6 times
             Room room = new Room(); //creates a new room each loop
             if (s.next().equalsIgnoreCase("id:")) room.setRoomID(parseInt(s.next(rx)));
@@ -207,6 +207,12 @@ public class Game {
             if (s.next().equalsIgnoreCase("south:")) room.setSouth((s.next(rx)));
             if (s.next().equalsIgnoreCase("east:")) room.setEast((s.next(rx)));
             if (s.next().equalsIgnoreCase("west:")) room.setWest((s.next(rx)));
+            if (s.next().equalsIgnoreCase("northwest:")) room.setNorthWest((s.next(rx)));
+            if (s.next().equalsIgnoreCase("northeast:")) room.setNorthEast((s.next(rx)));
+            if (s.next().equalsIgnoreCase("southwest:")) room.setSouthWest((s.next(rx)));
+            if (s.next().equalsIgnoreCase("southeast:")) room.setSouthEast((s.next(rx)));
+            if (s.next().equalsIgnoreCase("up:")) room.setUp((s.next(rx)));
+            if (s.next().equalsIgnoreCase("down:")) room.setDown((s.next(rx)));
             if (s.next().equalsIgnoreCase("hasBeenVisited:")) room.setHasBeenVisited(parseBoolean(s.next(rx)));
             if (s.next().equalsIgnoreCase("containsPlayer:")) room.setContainsPlayer(parseBoolean(s.next(rx)));
             map.put(i, room); //adds room to the arraylist
@@ -219,7 +225,7 @@ public class Game {
         String rx = "(.*?)";        //regex expression to take items in quotes
         File itemFile = new File("src/items.txt");     //create new pathname for the file
         Scanner s = new Scanner(itemFile);           //file scanner
-        s.useDelimiter(",");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
+        s.useDelimiter("/");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
         for (int i = 0; i <= 2; i++) { //loops 6 times
             Item item = new Item(); //creates a new room each loop
             if (s.next().equalsIgnoreCase("itemid:")) item.setItemId(parseInt(s.next(rx)));
@@ -238,7 +244,7 @@ public class Game {
         String rx = "(.*?)";        //regex expression to take items in quotes
         File puzzleFile = new File("src/puzzles.txt");     //create new pathname for the file
         Scanner s = new Scanner(puzzleFile);           //file scanner
-        s.useDelimiter(",");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
+        s.useDelimiter("/");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
         for (int i = 0; i <= 0; i++) { //loops 6 times
             Puzzle puzzle = new Puzzle(); //creates a new room each loop
             if (s.next().equalsIgnoreCase("puzzleID:")) puzzle.setPuzzleID(parseInt(s.next(rx)));
@@ -256,7 +262,7 @@ public class Game {
         String rx = "(.*?)";        //regex expression to take items in quotes
         File monsterFile = new File("src/monsters.txt");     //create new pathname for the file
         Scanner s = new Scanner(monsterFile);           //file scanner
-        s.useDelimiter(",");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
+        s.useDelimiter("/");        //uses delimiter of "," to parse through text file for attributes instead of spaces.
         for (int i = 0; i <= 0; i++) { //loops 6 times
             Monster monster = new Monster(); //creates a new room each loop
             if (s.next().equalsIgnoreCase("roomID:")) monster.setRoomId(parseInt(s.next(rx)));
@@ -327,6 +333,95 @@ public class Game {
             System.out.println("You cannot move in that direction.");
         }
     }
+//-----------------------------------------------------MOVE SOUTHEAST-------------------------------------------------------------
+
+    private static void moveSouthEast() { //method to move southeast
+        int current = returnCurrentRoomID();
+        if (parseInt(map.get(current).getSouthEast()) != -1) {
+            map.get(current).setContainsPlayer(false);
+            map.get(current).setHasBeenVisited(true);
+            map.get(parseInt(map.get(current).getSouthEast())).setContainsPlayer(true);
+            System.out.println("You are now in the " + map.get(returnCurrentRoomID()).getRoomName());
+            printExamineRoom();
+
+        } else {
+            System.out.println("You cannot move in that direction.");
+        }
+    }
+
+//------------------------------------------------------MOVE SOUTHWEST--------------------------------------------------------------
+
+    private static void moveSouthWest() { //method to move southwest
+        int current = returnCurrentRoomID();
+        if (parseInt(map.get(current).getSouthWest()) != -1) {
+            map.get(current).setContainsPlayer(false);
+            map.get(current).setHasBeenVisited(true);
+            map.get(parseInt(map.get(current).getSouthWest())).setContainsPlayer(true);
+            System.out.println("You are now in the " + map.get(returnCurrentRoomID()).getRoomName());
+            printExamineRoom();
+
+        } else {
+            System.out.println("You cannot move in that direction.");
+        }
+    }
+//------------------------------------------------------MOVE NORTHEAST----------------------------------------------------------
+
+    private static void moveNorthEast() { //method to move northeast
+        int current = returnCurrentRoomID();
+        if (parseInt(map.get(current).getNorthEast()) != -1) {
+            map.get(current).setContainsPlayer(false);
+            map.get(current).setHasBeenVisited(true);
+            map.get(parseInt(map.get(current).getNorthEast())).setContainsPlayer(true);
+            System.out.println("You are now in the " + map.get(returnCurrentRoomID()).getRoomName());
+            printExamineRoom();
+
+        } else {
+            System.out.println("You cannot move in that direction.");
+        }
+    }
+//-----------------------------------------------------MOVE NORTHWEST---------------------------------------------------------------
+private static void moveNorthWest() { //method to move northwest
+    int current = returnCurrentRoomID();
+    if (parseInt(map.get(current).getNorthWest()) != -1) {
+        map.get(current).setContainsPlayer(false);
+        map.get(current).setHasBeenVisited(true);
+        map.get(parseInt(map.get(current).getNorthWest())).setContainsPlayer(true);
+        System.out.println("You are now in the " + map.get(returnCurrentRoomID()).getRoomName());
+        printExamineRoom();
+
+    } else {
+        System.out.println("You cannot move in that direction.");
+    }
+}
+//--------------------------------------------------------MOVE UP-------------------------------------------------------------
+private static void moveUp() { //method to move up
+    int current = returnCurrentRoomID();
+    if (parseInt(map.get(current).getUp()) != -1) {
+        map.get(current).setContainsPlayer(false);
+        map.get(current).setHasBeenVisited(true);
+        map.get(parseInt(map.get(current).getSouth())).setContainsPlayer(true);
+        System.out.println("You are now in the " + map.get(returnCurrentRoomID()).getRoomName());
+        printExamineRoom();
+
+    } else {
+        System.out.println("You cannot move in that direction.");
+    }
+}
+//-------------------------------------------------------MOVE DOWN---------------------------------------------------------------
+private static void moveDown() { //method to move down
+    int current = returnCurrentRoomID();
+    if (parseInt(map.get(current).getDown()) != -1) {
+        map.get(current).setContainsPlayer(false);
+        map.get(current).setHasBeenVisited(true);
+        map.get(parseInt(map.get(current).getDown())).setContainsPlayer(true);
+        System.out.println("You are now in the " + map.get(returnCurrentRoomID()).getRoomName());
+        printExamineRoom();
+
+    } else {
+        System.out.println("You cannot move in that direction.");
+    }
+}
+
 //-------------------------------------------------EXAMINE AN ITEM-----------------------------------------------------------------
 
     private static String examineItem(String itemName) { //returns item description from inputted item from player inventory

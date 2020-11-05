@@ -6,6 +6,12 @@ public class Room {
     private String south;
     private String east;
     private String west;
+    private String northWest;
+    private String northEast;
+    private String southWest;
+    private String southEast;
+    private String up;
+    private String down;
     private String roomDescription;
     private String roomName;
     private boolean hasBeenVisited;
@@ -14,8 +20,7 @@ public class Room {
     ArrayList<Puzzle> puzzles = new ArrayList();
     ArrayList<Monster> monsters = new ArrayList();
 
-
-    public Room(int roomID, String north, String south, String east, String west, String roomDescription, String roomName, boolean hasBeenVisited, boolean containsPlayer, ArrayList<Item> roomInventory) {
+    public Room(int roomID, String north, String south, String east, String west, String roomDescription, String roomName, boolean hasBeenVisited, boolean containsPlayer, ArrayList<Item> roomInventory, String northWest,String northEast,String southWest,String southEast, String up, String down) {
         this.roomID = roomID;
         this.north = north;
         this.south = south;
@@ -26,6 +31,12 @@ public class Room {
         this.hasBeenVisited = hasBeenVisited;
         this.containsPlayer = containsPlayer;
         this.roomInventory = roomInventory;
+        this.northWest = northWest;
+        this.northEast = northEast;
+        this.southEast = southEast;
+        this.southWest = southWest;
+        this.up = up;
+        this.down = down;
     }
 
     public Room() {
@@ -39,6 +50,60 @@ public class Room {
         this.hasBeenVisited = hasBeenVisited;
         this.containsPlayer = containsPlayer;
         this.roomInventory = roomInventory;
+        this.northWest = northWest;
+        this.northEast = northEast;
+        this.southEast = southEast;
+        this.southWest = southWest;
+        this.up = up;
+        this.down = down;
+    }
+
+    public String getNorthWest() {
+        return northWest;
+    }
+
+    public void setNorthWest(String northWest) {
+        this.northWest = northWest;
+    }
+
+    public String getNorthEast() {
+        return northEast;
+    }
+
+    public void setNorthEast(String northEast) {
+        this.northEast = northEast;
+    }
+
+    public String getSouthWest() {
+        return southWest;
+    }
+
+    public void setSouthWest(String southWest) {
+        this.southWest = southWest;
+    }
+
+    public String getSouthEast() {
+        return southEast;
+    }
+
+    public void setSouthEast(String southEast) {
+        this.southEast = southEast;
+    }
+
+    public String getUp() {
+        return up;
+    }
+
+    public void setUp(String up) {
+        this.up = up;
+    }
+
+    public String getDown() {
+        return down;
+    }
+
+    public void setDown(String down) {
+        this.down = down;
     }
 
     public ArrayList<Puzzle> getPuzzles() {
