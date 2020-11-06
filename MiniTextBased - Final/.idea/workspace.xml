@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <workItem from="1604514379054" duration="18000" />
       <workItem from="1604528087399" duration="19441000" />
       <workItem from="1604586059586" duration="2200000" />
-      <workItem from="1604625234814" duration="1004000" />
+      <workItem from="1604625234814" duration="2285000" />
     </task>
     <task id="LOCAL-00001" summary="created rooms file for game">
       <created>1604543497772</created>
