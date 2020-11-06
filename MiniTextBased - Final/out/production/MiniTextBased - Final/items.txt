@@ -1,3 +1,18 @@
-ItemID:/0/RoomID:/0/Name:/Potion/Description:/A health potion./AttackPoints:/0/HealthRestored:/10/
-ItemID:/1/RoomID:/2/Name:/Sword/Description:/A shiny iron sword./AttackPoints:/5/HealthRestored:/0/
-ItemID:/2/RoomID:/4/Name:/Silver Key/Description:/A silver key--wonder where it fits.../AttackPoints:/0/HealthRestored:/0/
+ItemID:/0/RoomID:/7/Name:/Mylar Jacket/Description:/Very shiny almost metal looking jacket… and it suppresses my heat!Ω/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/1/
+ItemID:/1/RoomID:/3/Name:/Captain America Shield/Description:/Prop from the movie Captain America , very heavy and shiny almost like the real thing!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/2/RoomID:/13/Name:/Excalibur/Description:/Could it be… the one and only sword of King Arthur? No it is made of foam.. very dense foam./AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/3/RoomID:/12/Name:/Week old pizza/Description:/Old smelly pizza with mold growing on it. Yuck, some people have no manners. /AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/4/RoomID:/3/Name:/Finger Shaped USB/Description:/Ewww it feels fleshy. Maybe it has some useful information on it, I can probably inspect it!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/5/RoomID:/4/Name:/The Double Ristretto Venti Half-Soy Nonfat Decaf Organic Chocolate Brownie Iced Vanilla Double-Shot Gingerbread Frappuccino Extra Hot With Foam Whipped Cream Upside Down Double Blended, One Sweet'N Low and One Nutrasweet, and Ice/Description:/Woah that is a mouthful, kinda tasty. Might buy one tomorrow!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/6/RoomID:/10/Name:/Metal Mop Handle/Description:/Looks like someone tried to defend themselves.... probably didn’t work out./AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/7/RoomID:/10/Name:/Solid Gold Key Card/Description:/Looks and feels expensive and might open something...might keep this one for later./AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/8/RoomID:/0/Name:/Blue Access Card/Description:/I see so many of these.../AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/9/RoomID:/19/Name:/Bit/Description:/If I combine 4 of these I can make something useful!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/10/RoomID:/9/Name:/FlashLight /Description:/Using this flashlight will be very useful!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/3/RoomID:/2/Name:/Week old pizza/Description:/Old smelly pizza with mold growing on it. Yuck, some people have no manners. /AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/9/RoomID:/20/Name:/Bit/Description:/If I combine 4 of these I can make something useful!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/9/RoomID:/22/Name:/Bit/Description:/If I combine 4 of these I can make something useful!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+ItemID:/9/RoomID:/23/Name:/Bit/Description:/If I combine 4 of these I can make something useful!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
+
+
+

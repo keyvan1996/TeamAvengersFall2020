@@ -5,14 +5,18 @@ public class Item {
     private String description;
     private int hpRestored;
     private int attackPoints;
+    private int defense;
+    private int chanceToDeflect;
 
-    public Item(int roomId, String description, int hpRestored, int attackPoints,int itemId, String itemName) {
+    public Item(int roomId, String description, int hpRestored, int attackPoints,int itemId, String itemName, int defense, int chanceToDeflect) {
         this.roomId = roomId;
         this.description = description;
         this.hpRestored = hpRestored;
         this.attackPoints = attackPoints;
         this.itemId = itemId;
         this.itemName = itemName;
+        this.defense = defense;
+        this.chanceToDeflect = chanceToDeflect;
     }
 
     public Item() {
@@ -22,6 +26,24 @@ public class Item {
         this.attackPoints = attackPoints;
         this.itemId = itemId;
         this.itemName = itemName;
+        this.defense = defense;
+        this.chanceToDeflect = chanceToDeflect;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+
+    public int getChanceToDeflect() {
+        return chanceToDeflect;
+    }
+
+    public void setChanceToDeflect(int chanceToDeflect) {
+        this.chanceToDeflect = chanceToDeflect;
     }
 
     public String getItemName() {
