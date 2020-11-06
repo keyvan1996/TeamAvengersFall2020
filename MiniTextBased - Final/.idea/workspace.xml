@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="" />
+    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/TeamAvengersFall2020/MiniTextBased - Final" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,6 +70,7 @@
       <workItem from="1604514379054" duration="18000" />
       <workItem from="1604528087399" duration="19441000" />
       <workItem from="1604586059586" duration="2200000" />
+      <workItem from="1604625234814" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="created rooms file for game">
       <created>1604543497772</created>
@@ -76,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604543497773</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added items to the game">
+      <created>1604625288164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604625288164</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,17 +94,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created rooms file for game" />
-    <option name="LAST_COMMIT_MESSAGE" value="created rooms file for game" />
+    <MESSAGE value="added items to the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="added items to the game" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1604551151726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604551151726" />
-    <state x="491" y="114" key="CommitChangelistDialog2" timestamp="1604543497219">
+    <state x="491" y="114" key="CommitChangelistDialog2" timestamp="1604625287458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="491" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604543497219" />
+    <state x="491" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604625287458" />
     <state x="1011" y="352" key="FileChooserDialogImpl" timestamp="1604624917016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
