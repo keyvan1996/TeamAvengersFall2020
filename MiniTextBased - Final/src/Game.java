@@ -27,12 +27,15 @@ public class Game {
         readPuzzlesFile();
         readMonsterFile();
 
-        while (isGameActive(userInput, p1)) { // while loop for game
+        while (!userInput.equalsIgnoreCase("Exit") && p1.getHealth() != 0) { // while loop for game
             userInput = input.nextLine();
-            if (itemInteraction(userInput)) {
+            if (userInput.toLowerCase().contains("pickup") || // different inputs for item interactions
+                    userInput.toLowerCase().contains("drop") || userInput.toLowerCase().contains("examine")
+                    || userInput.toLowerCase().contains("equip") || userInput.toLowerCase().contains("unequip")
+                    || userInput.toLowerCase().contains("heal")) {
 
                 String itemName = ""; // string for the name
-                switch (userInput.split(" ")[0].toLowerCase()) { // splits based on the space
+                switch (userInput.split(" ")[0]) { // splits based on the space
                     case "pickup":
                         itemName = userInput.substring(userInput.indexOf("pickup ") + 7);
                         pickupItem(itemName);
@@ -60,7 +63,7 @@ public class Game {
                         break;
                 }
             } else if (userInput.toLowerCase().contains("move")) {
-                String direction = userInput.split(" ")[1].toLowerCase();
+                String direction = userInput.split(" ")[1];
                 switch (direction) {
                     case "north":
                         moveNorth();
@@ -189,49 +192,6 @@ public class Game {
             }
         }
     }
-
-    private static boolean itemInteraction(String userInput) {
-        return userInput.toLowerCase().contains("pickup") || // different inputs for item interactions
-                userInput.toLowerCase().contains("drop") || userInput.toLowerCase().contains("examine")
-                || userInput.toLowerCase().contains("equip") || userInput.toLowerCase().contains("unequip")
-                || userInput.toLowerCase().contains("heal");
-    }
-
-    public static boolean handlePausedGame(String userInput) {
-        Scanner input = new Scanner(System.in);
-        String msg = "Game is paused... type \"resume\" to continue.";
-
-        if (userInput.equalsIgnoreCase("pause")) {
-            System.out.println(msg);
-
-            while (!userInput.equalsIgnoreCase("resume")) {
-                userInput = input.nextLine();
-
-                if (!userInput.equalsIgnoreCase("resume")) {
-                    msg = "Game is paused... type \"resume\" to continue. Action cannot be done while game is paused.";
-                    System.out.println(msg);
-                }
-            }
-
-            msg = "Enjoy, game resumed.";
-            System.out.println(msg);
-
-            input.close();
-            return true;
-        } else {
-            input.close();
-            return true;
-        }
-    }
-
-    // checks to see if the game is still active...
-    private static boolean isGameActive(String userInput, Player p1) {
-        boolean isGameExited = !userInput.equalsIgnoreCase("Exit");
-        boolean isPlayerDead = p1.getHealth() != 0;
-
-        return isGameExited && isPlayerDead && handlePausedGame(userInput);
-    }
-
     // -----------------------------------------------------------READ ROOMS
     // FILE-------------------------------------------------------
 
