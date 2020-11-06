@@ -27,7 +27,6 @@ public class Game {
         readPuzzlesFile();
         readMonsterFile();
 
-<<<<<<< HEAD
 
         while (!userInput.equalsIgnoreCase("Exit") && p1.getHealth()!=0) { //while loop for game
             userInput = input.nextLine();
@@ -40,17 +39,6 @@ public class Game {
 
                 String itemName = ""; //string for the name
                 switch (userInput.split(" ")[0]) { //splits based on the space
-=======
-        while (!userInput.equalsIgnoreCase("Exit") && p1.getHealth() != 0) { // while loop for game
-            userInput = input.nextLine();
-            if (userInput.toLowerCase().contains("pickup") || // different inputs for item interactions
-                    userInput.toLowerCase().contains("drop") || userInput.toLowerCase().contains("examine")
-                    || userInput.toLowerCase().contains("equip") || userInput.toLowerCase().contains("unequip")
-                    || userInput.toLowerCase().contains("heal")) {
-
-                String itemName = ""; // string for the name
-                switch (userInput.split(" ")[0]) { // splits based on the space
->>>>>>> e2256109b59be4acc709a70a1dca64867038b686
                     case "pickup":
                         itemName = userInput.substring(userInput.indexOf("pickup ") + 7);
                         pickupItem(itemName);
@@ -221,7 +209,6 @@ public class Game {
             }
         }
     }
-<<<<<<< HEAD
 //-----------------------------------------------------------READ ROOMS FILE-------------------------------------------------------
 
     public static void readMapFile() throws FileNotFoundException { //method to read map.txt and put objects into arraylist for map
@@ -269,52 +256,6 @@ public class Game {
             if (s.next().equalsIgnoreCase("ChanceToDeflect:")) item.setChanceToDeflect((parseInt(s.next(rx))));
             map.get(item.getRoomId()).getRoomInventory().add(item); //adds item to room inventory arraylist
             s.nextLine(); //goes to the next line in text file
-=======
-    // -----------------------------------------------------------READ ROOMS
-    // FILE-------------------------------------------------------
-
-    public static void readMapFile() throws FileNotFoundException { // method to read map.txt and put objects into
-                                                                    // arraylist for map
-        String rx = "(.*?)"; // regex expression to take items in quotes
-        File mapFile = new File("src/rooms.txt"); // create new pathname for the file
-        Scanner s = new Scanner(mapFile); // file scanner
-        s.useDelimiter("/"); // uses delimiter of "," to parse through text file for attributes instead of
-                             // spaces.
-        for (int i = 0; i <= 5; i++) { // loops 6 times
-            Room room = new Room(); // creates a new room each loop
-            if (s.next().equalsIgnoreCase("id:"))
-                room.setRoomID(parseInt(s.next(rx)));
-            if (s.next().equalsIgnoreCase("name:"))
-                room.setRoomName((s.next(rx)));
-            if (s.next().equalsIgnoreCase("description:"))
-                room.setRoomDescription((s.next(rx)));
-            if (s.next().equalsIgnoreCase("north:"))
-                room.setNorth((s.next(rx)));
-            if (s.next().equalsIgnoreCase("south:"))
-                room.setSouth((s.next(rx)));
-            if (s.next().equalsIgnoreCase("east:"))
-                room.setEast((s.next(rx)));
-            if (s.next().equalsIgnoreCase("west:"))
-                room.setWest((s.next(rx)));
-            if (s.next().equalsIgnoreCase("northwest:"))
-                room.setNorthWest((s.next(rx)));
-            if (s.next().equalsIgnoreCase("northeast:"))
-                room.setNorthEast((s.next(rx)));
-            if (s.next().equalsIgnoreCase("southwest:"))
-                room.setSouthWest((s.next(rx)));
-            if (s.next().equalsIgnoreCase("southeast:"))
-                room.setSouthEast((s.next(rx)));
-            if (s.next().equalsIgnoreCase("up:"))
-                room.setUp((s.next(rx)));
-            if (s.next().equalsIgnoreCase("down:"))
-                room.setDown((s.next(rx)));
-            if (s.next().equalsIgnoreCase("hasBeenVisited:"))
-                room.setHasBeenVisited(parseBoolean(s.next(rx)));
-            if (s.next().equalsIgnoreCase("containsPlayer:"))
-                room.setContainsPlayer(parseBoolean(s.next(rx)));
-            map.put(i, room); // adds room to the arraylist
-            s.nextLine(); // goes to the next line in text file
->>>>>>> e2256109b59be4acc709a70a1dca64867038b686
         }
     }
 //--------------------------------------------------------READ PUZZLE FILE----------------------------------------------------------

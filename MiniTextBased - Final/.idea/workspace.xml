@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="" />
+    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +70,7 @@
       <workItem from="1604514379054" duration="18000" />
       <workItem from="1604528087399" duration="19441000" />
       <workItem from="1604586059586" duration="2200000" />
-      <workItem from="1604625234814" duration="695000" />
+      <workItem from="1604625234814" duration="1004000" />
     </task>
     <task id="LOCAL-00001" summary="created rooms file for game">
       <created>1604543497772</created>
@@ -108,22 +110,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1011" y="352" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604624917016" />
-    <state width="912" height="129" key="GridCell.Tab.0.bottom" timestamp="1604625556065">
+    <state width="914" height="129" key="GridCell.Tab.0.bottom" timestamp="1604626358957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604625556065" />
-    <state width="912" height="129" key="GridCell.Tab.0.center" timestamp="1604625556064">
+    <state width="914" height="129" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604626358957" />
+    <state width="914" height="129" key="GridCell.Tab.0.center" timestamp="1604626358957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="129" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604625556064" />
-    <state width="912" height="129" key="GridCell.Tab.0.left" timestamp="1604625556064">
+    <state width="914" height="129" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604626358957" />
+    <state width="914" height="129" key="GridCell.Tab.0.left" timestamp="1604626358957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="129" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604625556064" />
-    <state width="912" height="129" key="GridCell.Tab.0.right" timestamp="1604625556064">
+    <state width="914" height="129" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604626358957" />
+    <state width="914" height="129" key="GridCell.Tab.0.right" timestamp="1604626358957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="129" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604625556064" />
+    <state width="914" height="129" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604626358957" />
     <state width="1877" height="312" key="GridCell.Tab.1.bottom" timestamp="1604551922959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -144,65 +146,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604506487445" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>677</line>
-          <properties class="Game">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>650</line>
-          <properties class="Game">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>226</line>
-          <properties class="Game">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>678</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>679</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>651</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>652</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>653</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>654</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
