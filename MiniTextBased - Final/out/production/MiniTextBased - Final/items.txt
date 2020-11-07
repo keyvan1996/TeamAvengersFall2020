@@ -1,4 +1,4 @@
-ItemID:/0/RoomID:/7/Name:/Mylar Jacket/Description:/Very shiny almost metal looking jacket… and it suppresses my heat!Ω/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/1/
+ItemID:/0/RoomID:/7/Name:/Mylar Jacket/Description:/Very shiny almost metal looking jacket… and it suppresses my heat!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/1/
 ItemID:/1/RoomID:/3/Name:/Captain America Shield/Description:/Prop from the movie Captain America , very heavy and shiny almost like the real thing!/AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
 ItemID:/2/RoomID:/13/Name:/Excalibur/Description:/Could it be… the one and only sword of King Arthur? No it is made of foam.. very dense foam./AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
 ItemID:/3/RoomID:/12/Name:/Week old pizza/Description:/Old smelly pizza with mold growing on it. Yuck, some people have no manners. /AttackPoints:/0/HealthRestored:/10/Defense:/0/ChanceToDeflect:/0/
