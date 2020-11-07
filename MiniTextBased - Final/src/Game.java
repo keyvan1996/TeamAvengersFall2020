@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.Map;
 
@@ -245,13 +246,27 @@ public class Game {
         }
     }
 
-    public static void handleSaveGame() {
-        // player information - mainly hp
+    public static void handleSaveGame(Player p1) {
+        // player information
+        String playerName = p1.getName();
+        int playerHp = p1.getHealth();
+        ArrayList<Item> playerEquipedItems = p1.getEquippedItems();
+        int playerAP = p1.getAttackPoints();
+        String playerEquipedItemList = "";
+
+        for (Item item : playerEquipedItems) {
+            playerEquipedItemList += "/" + item;
+        }
+
+        String playerSaveData = "Player:/" + playerName + "/" + playerHp + "/" + playerEquipedItemList + "/" + playerAP;
+
         // invetory information - array of item id's [1,2,3] its a string not an array
         String items = accessPlayerInventory();
         // room location - only need room id
         int roomID = returnCurrentRoomID();
-        String saveData = "ItemList:/" + items + "/" + "RoomID:/" + roomID + "/";
+
+        String saveData = "ItemList:/" + items + "/" + "RoomID:/" + roomID + "/" + playerSaveData;
+
         try {
             BufferedWriter out = new BufferedWriter(new FileWriter("src/save.txt"));
             out.write(saveData);
@@ -270,7 +285,7 @@ public class Game {
         boolean isPaused = handlePausedGame(userInput);
 
         if (userInput.equalsIgnoreCase("save")) {
-            handleSaveGame();
+            handleSaveGame(p1);
         }
 
         return isGameExited && isPlayerDead && isPaused;
