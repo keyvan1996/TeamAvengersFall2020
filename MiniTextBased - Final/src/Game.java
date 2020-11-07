@@ -1,6 +1,9 @@
 import javax.swing.*;
+
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.*;
 import java.util.Map;
 
@@ -225,11 +228,7 @@ public class Game {
             System.out.println(msg);
 
             while (!userInput.equalsIgnoreCase("resume")) {
-
-                // while (input.hasNextLine()) {
                 userInput = input.nextLine();
-                System.out.println("userInput " + userInput);
-                // }
 
                 if (!userInput.equalsIgnoreCase("resume")) {
                     msg = "Game is paused... type \"resume\" to continue. Action cannot be done while game is paused.";
@@ -246,10 +245,34 @@ public class Game {
         }
     }
 
+    public static void handleSaveGame() {
+        // player information - mainly hp
+        // invetory information - array of item id's [1,2,3] its a string not an array
+        String items = accessPlayerInventory();
+        // room location - only need room id
+        int roomID = returnCurrentRoomID();
+        String saveData = "ItemList:/" + items + "/" + "RoomID:/" + roomID + "/";
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("src/save.txt"));
+            out.write(saveData);
+            out.close();
+            System.out.println("Saved Successfully. Game Ended.");
+        } catch (Exception e) {
+        }
+
+        // exit game
+        System.exit(0);
+    }
+
     private static boolean isGameActive(String userInput, Player p1) {
         boolean isGameExited = !userInput.equalsIgnoreCase("Exit");
         boolean isPlayerDead = p1.getHealth() != 0;
         boolean isPaused = handlePausedGame(userInput);
+
+        if (userInput.equalsIgnoreCase("save")) {
+            handleSaveGame();
+        }
+
         return isGameExited && isPlayerDead && isPaused;
     }
 
