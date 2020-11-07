@@ -1,10 +1,13 @@
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
     private int itemId;
     private int roomId;
     private String itemName;
     private String description;
     private int hpRestored;
     private int attackPoints;
+    private static final long serialVersionUID = 1L;
 
     public Item(int roomId, String description, int hpRestored, int attackPoints,int itemId, String itemName) {
         this.roomId = roomId;

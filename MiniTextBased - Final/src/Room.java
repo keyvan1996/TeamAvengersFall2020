@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Room {
+public class Room implements Serializable {
     private int roomID;
     private String north;
     private String south;
@@ -13,6 +14,7 @@ public class Room {
     ArrayList<Item> roomInventory = new ArrayList();
     ArrayList<Puzzle> puzzles = new ArrayList();
     ArrayList<Monster> monsters = new ArrayList();
+    private static final long serialVersionUID = 1L;
 
 
     public Room(int roomID, String north, String south, String east, String west, String roomDescription, String roomName, boolean hasBeenVisited, boolean containsPlayer, ArrayList<Item> roomInventory) {

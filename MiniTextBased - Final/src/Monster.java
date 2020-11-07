@@ -1,12 +1,14 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Monster{
+public class Monster implements Serializable {
     private int roomId;
     private int monsterID;
     private String name;
     private int health;
     private int attackPoints;
     private ArrayList<Item> inventory = new ArrayList();
+    private static final long serialVersionUID = 1L;
 
     public Monster(int monsterID, String name, int health, int attackPoints, ArrayList<Item> inventory, int roomId) {
         this.monsterID = monsterID;

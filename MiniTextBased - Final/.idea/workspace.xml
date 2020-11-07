@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="" />
+    <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TeamAvengersFall2020.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Map.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Monster.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Player.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Puzzle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/Room.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/items.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/monsters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/puzzles.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/TeamAvengersFall2020/rooms.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Puzzle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Room.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +66,19 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1jNIDbHNQAP6LiMJ7ER0nAFdlrI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -46,6 +103,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -67,6 +125,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1603909260823">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -76,22 +146,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1011" y="352" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603771839681" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1604507159594">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1878" height="289" key="GridCell.Tab.0.bottom" timestamp="1604787664277">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159594" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1604507159593">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1792.1097/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604672959859" />
+    <state width="1750" height="303" key="GridCell.Tab.0.bottom/0.23.1792.1097/-1920.23.1920.1057@0.23.1792.1097" timestamp="1604541360707" />
+    <state width="1878" height="289" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1604787664277" />
+    <state width="1878" height="289" key="GridCell.Tab.0.center" timestamp="1604787664276">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159593" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1604507159593">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1792.1097/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604672959859" />
+    <state width="1750" height="303" key="GridCell.Tab.0.center/0.23.1792.1097/-1920.23.1920.1057@0.23.1792.1097" timestamp="1604541360706" />
+    <state width="1878" height="289" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1604787664276" />
+    <state width="1878" height="289" key="GridCell.Tab.0.left" timestamp="1604787664275">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159593" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1604507159593">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1792.1097/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604672959858" />
+    <state width="1750" height="303" key="GridCell.Tab.0.left/0.23.1792.1097/-1920.23.1920.1057@0.23.1792.1097" timestamp="1604541360706" />
+    <state width="1878" height="289" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1604787664275" />
+    <state width="1878" height="289" key="GridCell.Tab.0.right" timestamp="1604787664276">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604507159593" />
+    <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1792.1097/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604672959859" />
+    <state width="1750" height="303" key="GridCell.Tab.0.right/0.23.1792.1097/-1920.23.1920.1057@0.23.1792.1097" timestamp="1604541360707" />
+    <state width="1878" height="289" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1604787664276" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1604507158490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -112,57 +194,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604506487445" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>503</line>
-          <properties class="Game" method="attackPlayer">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>476</line>
-          <properties class="Game" method="attackMonster">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>504</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>505</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>477</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>478</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>479</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Game.java</url>
-          <line>480</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

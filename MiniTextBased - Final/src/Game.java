@@ -1,6 +1,5 @@
 import javax.swing.*;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.*;
 import java.util.Map;
 
@@ -20,15 +19,47 @@ public class Game {
         String userInput = "";
         p1 = new Player();
         map = new HashMap<>();
-        Player p1 = new Player("Rob", 2, 100, 0);
+        Player player1 = new Player("Rob", 2, 100, 0);
 
-        readMapFile();
-        readItemsFile(); //read files into the game
-        readPuzzlesFile();
-        readMonsterFile();
+        File saved = new File("SavedPlayer.txt");
+        if (saved.exists()){
+            System.out.println("Do you want to load the game or start a new game?(start,load)");
+            userInput = input.nextLine();
+            switch (userInput){
+                case "load":
+                    FileInputStream fi = new FileInputStream(new File("SavedMap.txt"));
+                    FileInputStream fs = new FileInputStream(new File("SavedPlayer.txt"));
+                    try {
+                        ObjectInputStream oi = new ObjectInputStream(fi);
+                        map = (Map<Integer, Room>) oi.readObject();
+                        oi = new ObjectInputStream(fs);
+                        p1 = (Player) oi.readObject();
+                        oi.close();
+                        fi.close();
+                        fs.close();
+                    } catch (IOException | ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case "start":
+                    readMapFile();
+                    readItemsFile(); //read files into the game
+                    readPuzzlesFile();
+                    readMonsterFile();
+                    //TODO
+                    break;
+                default:
+                    System.out.println("The input is not correct please enter 'load' or 'start'");
+            }
+        }else {
+            readMapFile();
+            readItemsFile(); //read files into the game
+            readPuzzlesFile();
+            readMonsterFile();
+        }
 
-
-        while (!userInput.equalsIgnoreCase("Exit") && p1.getHealth()!=0) { //while loop for game
+        System.out.println("Game started! move in these directions\nnorth, sout, east, west, northeast, northwest, southeast, southwest, up, down");
+        while (!userInput.equalsIgnoreCase("Exit") && player1.getHealth()!=0) { //while loop for game
             userInput = input.nextLine();
             if (userInput.toLowerCase().contains("pickup") || //different inputs for item interactions
                     userInput.toLowerCase().contains("drop") ||
@@ -85,7 +116,24 @@ public class Game {
                 printExamineRoom();
             } else if (userInput.equalsIgnoreCase("inspect item")) {
                 System.out.println(accessRoomInventory());
-            } else if (userInput.equalsIgnoreCase("access inventory")) {
+            }
+            else if(userInput.toLowerCase().contains("save")){
+                FileOutputStream f = new FileOutputStream(new File("SavedMap.txt"));
+                FileOutputStream fs = new FileOutputStream(new File("SavedPlayer.txt"));
+                try {
+                    ObjectOutputStream o = new ObjectOutputStream(f);
+                    o.writeObject(map);
+                    o = new ObjectOutputStream(fs);
+                    o.writeObject(p1);
+                    o.close();
+                    f.close();
+                    fs.close();
+                    System.out.println("Game Saved Successfully.");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            else if (userInput.equalsIgnoreCase("access inventory")) {
                 System.out.println(accessPlayerInventory());
             } else if (userInput.equalsIgnoreCase("inspect puzzle")) {
                 if (!map.get(returnCurrentRoomID()).getPuzzles().isEmpty()) {
@@ -121,7 +169,7 @@ public class Game {
                 String str = input.nextLine();
                 if (str.equalsIgnoreCase("attack")){
                     System.out.println("You have entered combat mode");
-                    while(!(p1.getHealth()<=0) && !(map.get(returnCurrentRoomID()).getMonsters().get(0).getHealth()<=0)) { //starts the fight
+                    while(!(player1.getHealth()<=0) && !(map.get(returnCurrentRoomID()).getMonsters().get(0).getHealth()<=0)) { //starts the fight
                         String monsterName = map.get(returnCurrentRoomID()).getMonsters().get(0).getName();
                         String str2 = input.nextLine();
                             if  (str2.toLowerCase().contains("pickup") || //differnt inputs for item interactions
@@ -172,7 +220,7 @@ public class Game {
                                     displayPlayerHP();
                             }
                         }
-                    }if (p1.getHealth()<=0){
+                    }if (player1.getHealth()<=0){
                         System.out.println("Game over... Type 'new game' or 'Exit'");
                         String str3 = input.next();
                         if (str3.equalsIgnoreCase("New Game")){ //re run new game

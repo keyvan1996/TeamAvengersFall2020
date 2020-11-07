@@ -1,4 +1,6 @@
-public class Puzzle {
+import java.io.Serializable;
+
+public class Puzzle implements Serializable {
     private int puzzleID;
     private String question;
     private String answer;
@@ -6,6 +8,7 @@ public class Puzzle {
     private String hint;
     private boolean isSolved;
     private int roomID;
+    private static final long serialVersionUID = 1L;
 
     public Puzzle(int puzzleID, String question, String answer, int numAttempts, String hint, boolean isSolved, int roomID) {
         this.puzzleID = puzzleID;

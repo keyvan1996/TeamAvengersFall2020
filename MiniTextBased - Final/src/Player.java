@@ -1,12 +1,14 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements Serializable {
     private String name ="Robert";
     public int attackPoints = 2;
     ArrayList<Item> inventory = new ArrayList();
     public int health = 100;
     private int currentRoomID = 0;
     ArrayList<Item> equippedItems = new ArrayList<>();
+    private static final long serialVersionUID = 1L;
 
     public Player(String name, int attackPoints, int health, int currentRoomID) {
         this.name = name;
