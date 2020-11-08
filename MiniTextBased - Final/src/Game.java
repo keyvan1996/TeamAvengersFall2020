@@ -16,7 +16,7 @@ public class Game {
         String userInput = "";
         p1 = new Player();
         map = new HashMap<>();
-        Player p1 = new Player("Rob", 2, 100, 0);
+        Player p1 = new Player("Rob", 15, 150, 0 ,5);
 
         File saved = new File("SavedPlayer.txt");
         if (saved.exists()){
@@ -55,6 +55,7 @@ public class Game {
             readMonsterFile();
         }
         System.out.println("Game started! move in these directions\nnorth, south, east, west, northeast, northwest, southeast, southwest, up, down");
+        System.out.println("Type 'help' for commands.");
         printExamineRoom();
 
         while (isGameActive(userInput, p1)) { // while loop for game
@@ -128,7 +129,9 @@ public class Game {
                 printExamineRoom();
             } else if (userInput.equalsIgnoreCase("inspect item")) {
                 System.out.println(accessRoomInventory());
-            }else if(userInput.toLowerCase().contains("save")){
+            }else if (userInput.equalsIgnoreCase("help")){
+                help();
+            } else if(userInput.toLowerCase().contains("save")){
                 FileOutputStream f = new FileOutputStream(new File("SavedMap.txt"));
                 FileOutputStream fs = new FileOutputStream(new File("SavedPlayer.txt"));
                 try {
@@ -147,6 +150,10 @@ public class Game {
             printSurroundingRooms();
             } else if (userInput.equalsIgnoreCase("access inventory")) {
                 System.out.println(accessPlayerInventory());
+            } else if (userInput.equalsIgnoreCase("show equipped items")){
+                printEquippedItems();
+            } else if (userInput.equalsIgnoreCase("display stats")){
+            displayStats();
             } else if (userInput.equalsIgnoreCase("inspect puzzle")) {
                 if (!map.get(returnCurrentRoomID()).getPuzzles().isEmpty()) {
                     System.out.println(map.get(returnCurrentRoomID()).getPuzzles().get(0).getQuestion());
@@ -712,7 +719,7 @@ public class Game {
         String inventoryList = "";
         if (!map.get(returnCurrentRoomID()).getRoomInventory().isEmpty()) {
             for (int i = 0; i < map.get(returnCurrentRoomID()).getRoomInventory().size(); i++) {
-                inventoryList += map.get(returnCurrentRoomID()).getRoomInventory().get(i).getItemName();
+                inventoryList += ("| " + map.get(returnCurrentRoomID()).getRoomInventory().get(i).getItemName());
             }
         }
         return inventoryList;
@@ -724,6 +731,7 @@ public class Game {
             for (int i = 0; i <= p1.getInventory().size(); i++) {
                 if (p1.getInventory().get(i).getItemName().equalsIgnoreCase(itemName)) {
                     p1.setAttackPoints(p1.getAttackPoints() + p1.getInventory().get(i).getAttackPoints());
+                    p1.setDefense(p1.getDefense() + p1.getInventory().get(i).getDefense());
                     p1.equippedItems.add(p1.getInventory().get(i));
                     p1.getInventory().remove(p1.getInventory().get(i));
                 }
@@ -738,6 +746,7 @@ public class Game {
             for (int i = 0; i <= p1.getEquippedItems().size(); i++) {
                 if (p1.getEquippedItems().get(i).getItemName().equalsIgnoreCase(itemName)) {
                     p1.setAttackPoints(p1.getAttackPoints() - p1.getEquippedItems().get(i).getAttackPoints());
+                    p1.setDefense(p1.getDefense() - p1.getEquippedItems().get(i).getDefense());
                     p1.getInventory().add(p1.getEquippedItems().get(i));
                     p1.getEquippedItems().remove(p1.getEquippedItems().get(i));
                 }
@@ -750,13 +759,11 @@ public class Game {
     private static void heal(String itemName) { // use potion method
         int indexOfPotion = -1;
         Item potion = new Item();
-        if (itemName.equalsIgnoreCase("potion")) { // checks to make sure input is potion
+        if (itemName.equalsIgnoreCase("Week old pizza")||itemName.equalsIgnoreCase("The Double Ristretto Venti Half-Soy Nonfat Decaf Organic Chocolate Brownie Iced Vanilla Double-Shot Gingerbread Frappuccino Extra Hot With Foam Whipped Cream Upside Down Double Blended, One Sweet'N Low and One Nutrasweet, and Ice")) { // checks to make sure input is potion
             if (!p1.getInventory().isEmpty()) { // checks to see if inventory is not empty
                 for (int i = 0; i <= p1.getInventory().size(); i++) { // loop through array
-                    if (p1.getInventory().get(i).getItemName().equalsIgnoreCase("potion")) {
-                        if (p1.getInventory().get(i).getItemName().equalsIgnoreCase("potion")) { // checks for where
-                                                                                                 // potion is in the
-                                                                                                 // array
+                    if (p1.getInventory().get(i).getItemName().equalsIgnoreCase(itemName)) {
+                        if (p1.getInventory().get(i).getItemName().equalsIgnoreCase(itemName)) { // checks for where potion is in the array
                             potion = (p1.getInventory().get(i)); // gets information of item from inventory
                             indexOfPotion = i; // gets index for potion
                             break;
@@ -768,14 +775,14 @@ public class Game {
                 System.out.println("You have used the item to heal for " + potion.getHpRestored() + " life points.");
             }
         } else
-            System.out.println("There is no potion in your inventory.");
+            System.out.println("There is no consumable of that name in your inventory.");
     }
     // --------------------------------------------------EXAMINE MONSTER----------------------------------------------------------------
 
     private static void examineMonster() {
         System.out.println("This monster is " + map.get(returnCurrentRoomID()).getMonsters().get(0).getName());
-        System.out.println(map.get(returnCurrentRoomID()).getMonsters().get(0).getName() + "'s attack points: "
-                + map.get(returnCurrentRoomID()).getMonsters().get(0).getAttackPoints());
+        System.out.println(map.get(returnCurrentRoomID()).getMonsters().get(0).getName() + "'s attack points: " + map.get(returnCurrentRoomID()).getMonsters().get(0).getAttackPoints());
+        System.out.println(map.get(returnCurrentRoomID()).getMonsters().get(0).getDescription());
     }
     // --------------------------------------------------ATTACK MONSTER----------------------------------------------------------------
 
@@ -874,5 +881,87 @@ public class Game {
         if (!map.get(returnCurrentRoomID()).getDown().equalsIgnoreCase("-1")) {
             System.out.println("There is a room down.");
         }
+    }
+    // --------------------------------------------------------Display Stats----------------------------------------------------------
+    private static void displayStats(){
+        System.out.println("Attack: " + p1.getAttackPoints());
+        System.out.println("Health: " + p1.getHealth());
+        System.out.println("Defense: " + p1.getDefense());
+    }
+    // -----------------------------------------------------Print Equipped Items-------------------------------------------------------------
+    private static String printEquippedItems() { // returns the current rooms inventory in a string, item names
+        String inventoryList = "";
+        if (!p1.getEquippedItems().isEmpty()) {
+            for (int i = 0; i < p1.getEquippedItems().size(); i++) {
+                inventoryList += ("| " + p1.getEquippedItems().get(i).getItemName());
+            }
+        }
+        return inventoryList;
+    }
+    //-------------------------------------------------------HELP---------------------------------------
+    private static void help(){
+        System.out.println("-------------------------------------MOVEMENT-------------------------------------------------\n" +
+                "move + 'direction': | Allows you to move in the next directional room available. (north, south, east, west ,southeast, southwest, northeast, northwest, up, down)\n" +
+                "\n" +
+                "------------------------------------PICKUP ITEM--------------------------------------------------\n" +
+                "pickup + 'item name' | allows you to add an item from room to your inventory\n" +
+                "\n" +
+                "----------------------------------------DROP----------------------------------------------\n" +
+                "drop + 'item name' | allows you to drop an item from your inventory into the current room\n" +
+                "\n" +
+                "------------------------------------EXAMINE ITEM---------------------------------------------\n" +
+                "examine + 'item name' | allows you to examine an item in your inventory\n" +
+                "\n" +
+                "-------------------------------------EQUIP ITEM--------------------------------------------\n" +
+                "equip + 'item name' | allows you to equip an item from your inventory\n" +
+                "\n" +
+                "------------------------------------UNEQUIP ITEM------------------------------------------------\n" +
+                "unequip + 'item name' | allows you to unequip an item you have currently equipped.\n" +
+                "\n" +
+                "-----------------------------------------HEAL--------------------------------------------\n" +
+                "heal + 'item name'| allows you to use an item to heal\n" +
+                "\n" +
+                "---------------------------------------INSPECT ROOM-----------------------------------------------\n" +
+                "'inspect room' | allows you to see any items, puzzles, and monsters in the current room\n" +
+                "\n" +
+                "---------------------------------------INSPECT ITEM-------------------------------------------\n" +
+                "'inspect item' | retrieves the item name of the item in your current room\n" +
+                "\n" +
+                "-----------------------------------------ACCESS INVENTORY-----------------------------------------\n" +
+                "'access inventory' | shows what items you have in your inventory\n" +
+                "\n" +
+                "------------------------------------------PUZZLE----------------------------------------\n" +
+                "'inspect puzzle' |retrieves the question for a puzzle\n" +
+                "'solve puzzle' | prompts user for answer of puzzle\n" +
+                "'PUZZLE_ANSWER' | input your answer after the previous command\n" +
+                "'ignore puzzle' | removes a puzzle from the current room\n" +
+                "--------------------------------------------MONSTER--------------------------------------\n" +
+                "'inspect monster'| returns monster name in a room\n" +
+                "'ignore'| ignores and removes monster from current room\n" +
+                "'attack' | initiates attack mode after previous command\n" +
+                "'attack' + 'MONSTER_NAME' | attacks the monster for damage\n" +
+                "equip + 'item name' | allows you to equip an item from your inventory\n" +
+                "unequip + 'item name' | allows you to unequip an item you have currently equipped.\n" +
+                "heal + 'potion' | allows you to use a potion to heal\n" +
+                "pickup + 'item name' | allows you to add an item from room to your inventory\n" +
+                "drop + 'item name' | allows you to drop an item from your inventory into the current room\n" +
+                "-----------------------------------------LOST BATTLE-------------------------------------\n" +
+                "'new game' | restarts the game\n" +
+                "'exit' | exits the game\n" +
+                "---------------------------------------------EXIT--------------------------------------\n" +
+                "'exit' | exits the game\n" +
+                "---------------------------------------------SAVE--------------------------------------\n" +
+                "'save'| saves the current game state\n" +
+                "---------------------------------------------LOAD--------------------------------------\n" +
+                "'load'|loads the previous game state\n" +
+                "---------------------------------------------START--------------------------------------\n" +
+                "'start'| starts the game, new game\n" +
+                "-------------------------------------------SURROUNDING ROOMS------------------------------------\n" +
+                "'surrounding rooms'| prints any room direction the player can go in the current room\n" +
+                "---------------------------------------PRINT EQUIPPED ITEMS--------------------------------------------\n" +
+                "'show equipped items'|displays all items the character currently has equipped\n" +
+                "--------------------------------------------DISPLAY STATS---------------------------------------\n" +
+                "'display stats'| displays all the player's current stats including health, attack points, defense, including item effects\n" +
+                "\n");
     }
 }

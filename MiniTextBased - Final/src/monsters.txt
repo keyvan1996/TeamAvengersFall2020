@@ -1,14 +1,14 @@
-roomID:/32/monsterID:/0/name:/Agent 002/health:/100/attackPoints:/0/description:/With a mysterious grin this person was sent by an incognito group… but for what?/
-roomID:/24/monsterID:/1/name:/RX-93/health:/25/attackPoints:/0/description:/With its infrared sensors this robot can detect all heat signatures…make sure you hide or maybe an item can save you.../
-roomID:/23/monsterID:/2/name:/RX-78/health:/30/attackPoints:/0/description:/With its mounted cannon this robot can detect even the slightest of movement. But be careful… it has a 99.8% hit rate!/
-roomID:/19/monsterID:/3/name:/RX-11/health:/45/attackPoints:/0/description:/A flying drone that will alert when people have entered its vicinity...maybe an item can take it down?/
-roomID:/25/monsterID:/4/name:/Prototype-0/health:/100/attackPoints:/0/description:/With its new invisibility ability you have to wish for luck to try and hit it. Some goggles might come in handy…/
-roomID:/21/monsterID:/5/name:/RX-88/health:/65/attackPoints:/0/description:/With its extendo arms it can grab anything within a 20 meter radius. Might have to watch out for this one./
-roomID:/20/monsterID:/6/name:/RX-37/health:/10/attackPoints:/0/description:/Very simple, it blows up. Please find a shield…/
-roomID:/28/monsterID:/7/name:/Henchmen/health:/5/attackPoints:/0/description:/The vile scum have one weakness, a good old fashioned fist fight… or maybe you just use a weapon.. who knows.  /
-roomID:/30/monsterID:/8/name:/Robot Rats/health:/50/attackPoints:/0/description:/Monstrous rats have spotted you in the break room ,After you ate their pizza ./
-roomID:/18/monsterID:/9/name:/Boss/health:/15/attackPoints:/0/description:/Oh crap its the boss , If you hide behind your shield the Boss will not see you/
-roomID:/36/monsterID:/10/name:/CEO/health:/15/attackPoints:/0/description:/Oh crap it’s the CEO , If you hide behind your shield the CEO will not see you/
-roomID:/35/monsterID:/11/name:/Security Camera/health:/5/attackPoints:/0/description:/When spotted by a security camera IN HALLWAY 2 without your shield you will be seen /
-roomID:/22/monsterID:/12/name:/Combat Robot /health:/100/attackPoints:/0/description:/ the Combat room is full of robots if you don't take the BIT you will not survive/
-roomID:/29/monsterID:/7/name:/Henchmen/health:/5/attackPoints:/0/description:/The vile scum have one weakness, a good old fashioned fist fight… or maybe you just use a weapon.. who knows./
+roomID:/32/monsterID:/0/name:/Agent 002/health:/100/attackPoints:/15/description:/With a mysterious grin this person was sent by an incognito group… but for what?/
+roomID:/24/monsterID:/1/name:/RX-93/health:/25/attackPoints:/15/description:/With its infrared sensors this robot can detect all heat signatures…make sure you hide or maybe an item can save you.../
+roomID:/23/monsterID:/2/name:/RX-78/health:/30/attackPoints:/25/description:/With its mounted cannon this robot can detect even the slightest of movement. But be careful… it has a 99.8% hit rate!/
+roomID:/19/monsterID:/3/name:/RX-11/health:/45/attackPoints:/20/description:/A flying drone that will alert when people have entered its vicinity...maybe an item can take it down?/
+roomID:/25/monsterID:/4/name:/Prototype-0/health:/100/attackPoints:/25/description:/With its new invisibility ability you have to wish for luck to try and hit it. Some goggles might come in handy…/
+roomID:/21/monsterID:/5/name:/RX-88/health:/65/attackPoints:/25/description:/With its extendo arms it can grab anything within a 20 meter radius. Might have to watch out for this one./
+roomID:/20/monsterID:/6/name:/RX-37/health:/10/attackPoints:/15/description:/Very simple, it blows up. Please find a shield…/
+roomID:/28/monsterID:/7/name:/Henchmen/health:/5/attackPoints:/5/description:/The vile scum have one weakness, a good old fashioned fist fight… or maybe you just use a weapon.. who knows.  /
+roomID:/30/monsterID:/8/name:/Robot Rats/health:/50/attackPoints:/15/description:/Monstrous rats have spotted you in the break room ,After you ate their pizza ./
+roomID:/18/monsterID:/9/name:/Boss/health:/15/attackPoints:/20/description:/Oh crap its the boss , If you hide behind your shield the Boss will not see you/
+roomID:/36/monsterID:/10/name:/CEO/health:/15/attackPoints:/20/description:/Oh crap it’s the CEO , If you hide behind your shield the CEO will not see you/
+roomID:/35/monsterID:/11/name:/Security Camera/health:/5/attackPoints:/20/description:/When spotted by a security camera IN HALLWAY 2 without your shield you will be seen /
+roomID:/22/monsterID:/12/name:/Combat Robot /health:/100/attackPoints:/20/description:/ the Combat room is full of robots if you don't take the BIT you will not survive/
+roomID:/29/monsterID:/7/name:/Henchmen/health:/5/attackPoints:/5/description:/The vile scum have one weakness, a good old fashioned fist fight… or maybe you just use a weapon.. who knows./

@@ -8,13 +8,15 @@ public class Player implements Serializable {
     public int health = 100;
     private int currentRoomID = 0;
     ArrayList<Item> equippedItems = new ArrayList<>();
+    private int defense = 0;
 
-    public Player(String name, int attackPoints, int health, int currentRoomID) {
+    public Player(String name, int attackPoints, int health, int currentRoomID, int defense) {
         this.name = name;
         this.attackPoints = attackPoints;
         this.inventory = inventory;
         this.health = health;
         this.currentRoomID = currentRoomID;
+        this.defense = defense;
     }
 
     public Player() {
@@ -23,6 +25,15 @@ public class Player implements Serializable {
         this.inventory = inventory;
         this.health = health;
         this.currentRoomID = currentRoomID;
+        this.defense = defense;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
     }
 
     public int getCurrentRoomID() {
