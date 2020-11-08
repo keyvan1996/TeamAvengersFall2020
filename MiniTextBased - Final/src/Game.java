@@ -1,16 +1,8 @@
-import javax.swing.*;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.lang.reflect.Array;
+import java.io.*;
 import java.util.*;
 import java.util.Map;
 
-import static java.lang.Boolean.getBoolean;
 import static java.lang.Boolean.parseBoolean;
-import static java.lang.Integer.compareUnsigned;
 import static java.lang.Integer.parseInt;
 
 //-----------------------------------------------------GAME CLASS TRAITS-------------------------------------------------------------
@@ -26,10 +18,43 @@ public class Game {
         map = new HashMap<>();
         Player p1 = new Player("Rob", 2, 100, 0);
 
-        readMapFile();
-        readItemsFile(); // read files into the game
-        readPuzzlesFile();
-        readMonsterFile();
+        File saved = new File("SavedPlayer.txt");
+        if (saved.exists()){
+            System.out.println("Do you want to load the game or start a new game?(start,load)");
+            userInput = input.nextLine();
+            switch (userInput){
+                case "load":
+                    FileInputStream fi = new FileInputStream(new File("SavedMap.txt"));
+                    FileInputStream fs = new FileInputStream(new File("SavedPlayer.txt"));
+                    try {
+                        ObjectInputStream oi = new ObjectInputStream(fi);
+                        map = (Map<Integer, Room>) oi.readObject();
+                        oi = new ObjectInputStream(fs);
+                        p1 = (Player) oi.readObject();
+                        oi.close();
+                        fi.close();
+                        fs.close();
+                    } catch (IOException | ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case "start":
+                    readMapFile();
+                    readItemsFile(); //read files into the game
+                    readPuzzlesFile();
+                    readMonsterFile();
+                    //TODO
+                    break;
+                default:
+                    System.out.println("The input is not correct please enter 'load' or 'start'");
+            }
+        }else {
+            readMapFile();
+            readItemsFile(); //read files into the game
+            readPuzzlesFile();
+            readMonsterFile();
+        }
+        System.out.println("Game started! move in these directions\nnorth, south, east, west, northeast, northwest, southeast, southwest, up, down");
         printExamineRoom();
 
         while (isGameActive(userInput, p1)) { // while loop for game
@@ -103,7 +128,22 @@ public class Game {
                 printExamineRoom();
             } else if (userInput.equalsIgnoreCase("inspect item")) {
                 System.out.println(accessRoomInventory());
-            }else if (userInput.equalsIgnoreCase("surrounding rooms")) {
+            }else if(userInput.toLowerCase().contains("save")){
+                FileOutputStream f = new FileOutputStream(new File("SavedMap.txt"));
+                FileOutputStream fs = new FileOutputStream(new File("SavedPlayer.txt"));
+                try {
+                    ObjectOutputStream o = new ObjectOutputStream(f);
+                    o.writeObject(map);
+                    o = new ObjectOutputStream(fs);
+                    o.writeObject(p1);
+                    o.close();
+                    f.close();
+                    fs.close();
+                    System.out.println("Game Saved Successfully.");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else if (userInput.equalsIgnoreCase("surrounding rooms")) {
             printSurroundingRooms();
             } else if (userInput.equalsIgnoreCase("access inventory")) {
                 System.out.println(accessPlayerInventory());
@@ -125,8 +165,7 @@ public class Game {
                                     str2 = input.nextLine();
                                     solvePuzzle(str2);
                                     if (attempts == 0) {
-                                        System.out
-                                                .println("You have run out of attempts. Come back later to try again.");
+                                        System.out.println("You have run out of attempts. Come back later to try again.");
                                     }
                                     return;
                                 }
@@ -292,9 +331,9 @@ public class Game {
         boolean isPlayerDead = p1.getHealth() != 0;
         boolean isPaused = handlePausedGame(userInput);
 
-        if (userInput.equalsIgnoreCase("save")) {
-            handleSaveGame(p1);
-        }
+//        if (userInput.equalsIgnoreCase("save")) {
+//            handleSaveGame(p1);
+//        }
 
         return isGameExited && isPlayerDead && isPaused;
     }

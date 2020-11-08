@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Map {
+public class Map implements Serializable {
     HashMap map = new HashMap<Integer,Room>();
 
     public Map(HashMap map) {

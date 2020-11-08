@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements Serializable {
     private String name ="Robert";
     public int attackPoints = 2;
     ArrayList<Item> inventory = new ArrayList();

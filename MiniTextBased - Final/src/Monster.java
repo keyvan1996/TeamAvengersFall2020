@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Monster{
+public class Monster implements Serializable {
     private int roomId;
     private int monsterID;
     private String name;
