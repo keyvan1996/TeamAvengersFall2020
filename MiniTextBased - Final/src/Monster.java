@@ -1,20 +1,23 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Monster{
+public class Monster implements Serializable {
     private int roomId;
     private int monsterID;
     private String name;
     private int health;
     private int attackPoints;
     private ArrayList<Item> inventory = new ArrayList();
+    private String description;
 
-    public Monster(int monsterID, String name, int health, int attackPoints, ArrayList<Item> inventory, int roomId) {
+    public Monster(int monsterID, String name, int health, int attackPoints, ArrayList<Item> inventory, int roomId, String description) {
         this.monsterID = monsterID;
         this.name = name;
         this.health = health;
         this.attackPoints = attackPoints;
         this.inventory = inventory;
         this.roomId = roomId;
+        this.description = description;
     }
 
     public Monster() {
@@ -24,6 +27,15 @@ public class Monster{
         this.attackPoints = attackPoints;
         this.inventory = inventory;
         this.roomId= roomId;
+        this.description= description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getRoomId() {

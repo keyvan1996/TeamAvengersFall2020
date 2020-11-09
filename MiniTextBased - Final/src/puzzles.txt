@@ -1,1 +1,7 @@
-puzzleID:/0/roomID:/1/Question:/You see a boat filled with people yet there isn’t a single person on board. How is that possible?/Answer:/All the people on the boat are married./Hint:/Marriage/
+puzzleID:/0/roomID:/16/Question:/What is missing to be able to print your name?   name = input(“Give me your name: ”)print(“Your name is ” ___)/Answer:/+name/Hint:/No hint available/
+puzzleID:/1/roomID:/18/Question:/When I point up it is bright, but when I point down it’s dark. What am I?/Answer:/A light switch/Hint:/No hint available/
+puzzleID:/2/roomID:/19/Question:/Can you decode my message? 01001001 00100000 01100001 01101101 00100000 01101100 01100101 01100001 01110010 01101110 01101001 01101110 01100111 00101100 00100000 01110100 01111001 01110000 01100101 00100000 01111001 01100101 01110011 00101110/Answer:/Yes/Hint:/Use a binary to text converter./
+puzzleID:/3/roomID:/20/Question:/What should be your input?  if(n=2) {unlock = false;} else if (n=3){unlock = true;} /Answer:/3/Hint:/No hint available/
+puzzleID:/4/roomID:/21/Question:/I have a ring, but no hands, I used to be plugged into the wall but now I follow you everywhere. What am I?/Answer:/Cell Phone/Hint:/You look at it all the time./
+puzzleID:/5/roomID:/22/Question:/What input will make it a palindrome?  if(input.equals(reverseInput)) {return “Is a Palindrome” else return “Not a Palindrome”;}/Answer:/racecar/Hint:/Try racecar./
+puzzleID:/6/roomID:/23/Question:/Why does the developer always wear glasses?/Answer:/Cant C#/Hint:/C#/
