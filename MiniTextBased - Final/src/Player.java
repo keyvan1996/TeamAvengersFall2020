@@ -3,12 +3,12 @@ import java.util.ArrayList;
 
 public class Player implements Serializable {
     private String name ="Robert";
-    public int attackPoints = 2;
+    public int attackPoints = 15;
     ArrayList<Item> inventory = new ArrayList();
-    public int health = 100;
+    public int health = 150;
     private int currentRoomID = 0;
     ArrayList<Item> equippedItems = new ArrayList<>();
-    private int defense = 0;
+    private int defense = 5;
 
     public Player(String name, int attackPoints, int health, int currentRoomID, int defense) {
         this.name = name;

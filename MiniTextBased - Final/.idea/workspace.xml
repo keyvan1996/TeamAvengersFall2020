@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b81c16c-28a7-4b27-8aa7-43b6a7982016" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SavedMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SavedMap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SavedPlayer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SavedPlayer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/items.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/monsters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/monsters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MiniTextBased - Final/rooms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MiniTextBased - Final/rooms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/items.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monsters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/monsters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rooms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/rooms.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +37,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Desktop/currentstate/MiniTextBased - Final" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -47,6 +48,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -85,7 +87,8 @@
       <workItem from="1604514379054" duration="18000" />
       <workItem from="1604528087399" duration="19441000" />
       <workItem from="1604586059586" duration="2200000" />
-      <workItem from="1604625234814" duration="28171000" />
+      <workItem from="1604625234814" duration="32578000" />
+      <workItem from="1605271692440" duration="9048000" />
     </task>
     <task id="LOCAL-00001" summary="created rooms file for game">
       <created>1604543497772</created>
@@ -125,41 +128,80 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1011" y="352" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604788872555" />
-    <state width="1877" height="126" key="GridCell.Tab.0.bottom" timestamp="1604864905849">
+    <state width="1877" height="392" key="GridCell.Tab.0.bottom" timestamp="1605282813645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604864905849" />
-    <state width="1877" height="126" key="GridCell.Tab.0.center" timestamp="1604864905849">
+    <state width="1043" height="641" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1605279075869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604864905849" />
-    <state width="1877" height="126" key="GridCell.Tab.0.left" timestamp="1604864905849">
+    <state width="1043" height="641" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1605279075869" />
+    <state width="1877" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605282813645" />
+    <state width="1877" height="392" key="GridCell.Tab.0.center" timestamp="1605282813645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604864905849" />
-    <state width="1877" height="126" key="GridCell.Tab.0.right" timestamp="1604864905849">
+    <state width="1043" height="641" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1605279075869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="126" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604864905849" />
-    <state width="914" height="311" key="GridCell.Tab.1.bottom" timestamp="1604793405766">
+    <state width="1043" height="641" key="GridCell.Tab.0.center.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1605279075869" />
+    <state width="1877" height="392" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605282813645" />
+    <state width="1877" height="392" key="GridCell.Tab.0.left" timestamp="1605282813645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604793405766" />
-    <state width="914" height="311" key="GridCell.Tab.1.center" timestamp="1604793405766">
+    <state width="1043" height="641" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1605279075869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="311" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604793405766" />
-    <state width="914" height="311" key="GridCell.Tab.1.left" timestamp="1604793405766">
+    <state width="1043" height="641" key="GridCell.Tab.0.left.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1605279075869" />
+    <state width="1877" height="392" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605282813645" />
+    <state width="1877" height="392" key="GridCell.Tab.0.right" timestamp="1605282813645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="311" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604793405766" />
-    <state width="914" height="311" key="GridCell.Tab.1.right" timestamp="1604793405766">
+    <state width="1043" height="641" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1605279075869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="311" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604793405766" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1604506487445">
+    <state width="1043" height="641" key="GridCell.Tab.0.right.inPresentationMode/0.0.1920.1040@0.0.1920.1040" timestamp="1605279075869" />
+    <state width="1877" height="392" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605282813645" />
+    <state width="1269" height="311" key="GridCell.Tab.1.bottom" timestamp="1605273240242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604506487445" />
+    <state width="1269" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605273240242" />
+    <state width="1269" height="311" key="GridCell.Tab.1.center" timestamp="1605273240242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1269" height="311" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605273240242" />
+    <state width="1269" height="311" key="GridCell.Tab.1.left" timestamp="1605273240242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1269" height="311" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605273240241" />
+    <state width="1269" height="311" key="GridCell.Tab.1.right" timestamp="1605273240242">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1269" height="311" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605273240242" />
+    <state x="899" y="170" key="SettingsEditor" timestamp="1605278646174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="899" y="170" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605278646174" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1605271692434">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605271692434" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>735</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Game.java</url>
+          <line>732</line>
+          <properties class="Game" method="equipItem">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

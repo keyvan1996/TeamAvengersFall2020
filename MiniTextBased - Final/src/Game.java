@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.*;
 import java.util.*;
 import java.util.Map;
@@ -12,6 +13,9 @@ public class Game {
 
     // -------------------------------------------MAIN METHOD-----------------------------------------------------------------------
     public static void main(String[] args) throws FileNotFoundException {
+
+
+
         Scanner input = new Scanner(System.in);
         String userInput = "";
         p1 = new Player();
@@ -734,6 +738,7 @@ public class Game {
                     p1.setDefense(p1.getDefense() + p1.getInventory().get(i).getDefense());
                     p1.equippedItems.add(p1.getInventory().get(i));
                     p1.getInventory().remove(p1.getInventory().get(i));
+                    break;
                 }
             }
         }
@@ -965,3 +970,4 @@ public class Game {
                 "\n");
     }
 }
+
